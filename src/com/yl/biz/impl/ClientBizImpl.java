@@ -14,7 +14,6 @@ public class ClientBizImpl implements ClientBiz {
 	
 	@Override
 	public List<Client> findAll(int currentPage, int pageSize, ClientVo vo) {
-		System.out.println(vo.getClientcomp());
 		return dao.queryAll(currentPage, pageSize, vo);
 	}
 

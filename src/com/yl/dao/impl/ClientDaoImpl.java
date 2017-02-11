@@ -20,7 +20,7 @@ public class ClientDaoImpl extends DbUtil implements ClientDao {
 	private String setCondition(ClientVo vo, String sql) {
 		if (vo != null) {
 			if (vo.getClientcomp() !=null && !"".equals(vo.getClientcomp())) {
-				sql += " and clientComp = '"+vo.getClientcomp()+"'";
+				sql += " and clientComp like '%"+vo.getClientcomp()+"%'";
 			}
 		}
 		return sql;
@@ -43,7 +43,7 @@ public class ClientDaoImpl extends DbUtil implements ClientDao {
 
 	@Override
 	public int save(Client entity) {
-		String sql = "insert into client values(? , ? , ? , ? , ? , ?)";
+		String sql = "insert into client values(? , ? , ? , ? , ? , ? , ?)";
 		return super.excuteUpdate(sql, entity.getClientId() , entity.getClientName() ,entity.getClientComp() , entity.getClientPhone() , entity.getClientAdd() , entity.getClientBack() , entity.getClientDate());
 	}
 

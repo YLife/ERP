@@ -31,9 +31,7 @@ document.getElementById("aa").style.display="";
 </head>
 
 <body class="ContentBody">
-	<form action="DoClientEditServlet" method="post" name="form" target="sypost">
-		<input type="hidden" name="clientId" value="${client.clientId }"/>
-		<input type="hidden" name="clientDate" value="${client.clientDate }"/>
+	<form action="DoClientAddServlet" method="post" name="form" target="sypost">
 		<div class="MainDiv">
 			<table width="99%" border="0" cellpadding="0" cellspacing="0"
 				class="CContent">
@@ -53,25 +51,24 @@ document.getElementById("aa").style.display="";
 											<tr>
 												<td align="right" width="15%">公司名称:</td>
 												<td width="35%"><input name='clientComp' type="text"
-													class="text" style="width:154px"
-													value="${client.clientComp }" /> <span class="red">*</span></td>
+													class="text" style="width:154px"/> <span class="red">*</span></td>
 												<td width="16%" align="right" nowrap="nowrap">联系人:</td>
 												<td width="34%"><input class="text" name='clientName'
-													style="width:154pxzzz" value="${client.clientName }" /></td>
+													style="width:154pxzzz"/></td>
 											</tr>
 											<tr>
 												<td nowrap="nowrap" align="right">联系电话:</td>
 												<td><input class="text" name='clientPhone'
-													style="width:154px" value="${client.clientPhone }" /></td>
+													style="width:154px"/></td>
 												<td align="right">联系地址:</td>
 												<td><input class="text" name='clientAdd'
-													style="width:154px" value="${client.clientAdd }" /></td>
+													style="width:154px"/></td>
 											</tr>
 
 											<tr>
 												<td align="right">公司背景:</td>
 												<td colspan="3"><textarea name="clientBack" cols="100"
-														rows="8">${client.clientBack }</textarea></td>
+														rows="8"></textarea></td>
 											</tr>
 										</table>
 										<br />

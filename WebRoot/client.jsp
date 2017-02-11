@@ -46,12 +46,8 @@ html { overflow-x: auto; overflow-y: auto; border:0;}
 </style>
 
 <link href="css/css.css" rel="stylesheet" type="text/css" />
-<script type="text/JavaScript">
-
-</script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<SCRIPT language=JavaScript>
+<script type="text/JavaScript">
 function sousuo(){
 	window.open("gaojisousuo.htm","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
 }
@@ -75,11 +71,10 @@ function unselectAll(){
 }
 
 function link(){
-    document.getElementById("fom").action="kehu.htm";
-   document.getElementById("fom").submit();
+   window.location.href="clientAdd.jsp";
 }
-
-</SCRIPT>
+</script>
+</head>
 
 <body>
 <form action="ClientServlet" name="fom" id="fom" method="post">
@@ -88,14 +83,14 @@ function link(){
   <tr>
     <td height="30">      <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td height="62" background="images/nav04.gif">
+          <td height="62" style="background-image: url('images/nav04.gif');">
             
 		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
 		    <tr>
 			  <td width="24"><img src="images/ico07.gif" width="20" height="18" /></td>
 			  <td width="519">
 			  	<label>公司名称:
-			      <input name="clientcomp" type="text" nam="gongs" value="${clientcomp }"/>
+			      <input name="clientcomp" type="text" value="${clientcomp }"/>
 			  	</label>
 			    <input name="Submit" type="submit" class="right-button02" value="查询" />
 			  </td>
@@ -110,7 +105,8 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" /> <input name="Submit" type="button" class="right-button08" value="添加人员信息" onclick="link();" />
+		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" onclick="link();" /> 
+		           <input name="Submit" type="button" class="right-button08" value="添加人员信息" onclick="link();" />
 		           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 	              </td>
           </tr>
@@ -139,7 +135,7 @@ function link(){
 	                    <td bgcolor="#FFFFFF">${client.clientAdd }</td>
 	                    <td bgcolor="#FFFFFF">${client.clientBack }</td>
 	                    <td bgcolor="#FFFFFF">${client.clientDate }</td>
-						<td bgcolor="#FFFFFF"><a href="ClientEditServlet?clientId=${client.clientId }">编辑</a>&nbsp;|&nbsp;<a href="kehuminxi.html">查看</a></td>
+						<td bgcolor="#FFFFFF"><a href="ClientEditServlet?clientId=${client.clientId }">编辑</a>&nbsp;|&nbsp;<a href="ClientDataServlet?clientId=${client.clientId }">查看</a></td>
 	                  </tr>
                   </c:forEach>
                 </table></td>
