@@ -50,8 +50,7 @@ html { overflow-x: auto; overflow-y: auto; border:0;}
 
 </script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<SCRIPT language=JavaScript>
+<SCRIPT type="text/JavaScript">
 function sousuo(){
 	window.open("gaojisousuo.htm","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
 }
@@ -79,86 +78,90 @@ function link(){
    document.getElementById("fom").submit();
 }
 </SCRIPT>
+</head>
 
 <body>
-<form name="fom" id="fom" method="post">
-<table width="100%" border="0" cellspacing="0" cellpadding="0">
-  <tr>
-    <td height="30">      
-    	<table width="100%" border="0" cellspacing="0" cellpadding="0">
-        	<tr>
-          		<td height="62" background="images/nav04.gif">
-		   			<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
-		    			<tr><td width="21">&nbsp;</td></tr>
-          			</table>
-          		</td>
-        	</tr>
-   		</table>
-   	</td>
-  </tr>
-  <tr>
-    <td><table id="subtree1" style="DISPLAY: " width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
-         
-              <tr>
-                <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
+	<form name="fom" id="fom" method="post">
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<td height="30">
+					<table width="100%" border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td height="62" style="background-image: url('images/nav04.gif');">
+								<table width="98%" border="0" align="center" cellpadding="0"
+									cellspacing="0">
+									<tr>
+										<td width="21">&nbsp;</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td><table id="subtree1" style="DISPLAY: " width="100%"
+						border="0" cellspacing="0" cellpadding="0">
+						<tr>
+							<td><table width="95%" border="0" align="center"
+									cellpadding="0" cellspacing="0">
+									<tr>
+										<td height="40" class="font42"><table width="100%"
+												border="0" cellpadding="4" cellspacing="1" bgcolor="#464646"
+												class="newfont03">
 
-					                  <tr>
-                    <td height="20" colspan="2" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 客户详细内容</td>
-                    </tr>
-                  <tr>
-				    <td width="16%" height="20" align="right" bgcolor="#FFFFFF">公司名称:</td>
-                    <td width="84%" colspan="2" bgcolor="#FFFFFF">${client.clientComp }</td>
-                    </tr>
-                  <tr>
-				    <td height="20" align="right" bgcolor="#FFFFFF">联系人:</td>
-				    <td colspan="2" bgcolor="#FFFFFF">${client.clientName }</td>
-                    </tr>
-                  <tr>
-				    <td height="20" align="right" bgcolor="#FFFFFF">联系电话:</td>
-				    <td colspan="2" bgcolor="#FFFFFF">${client.clientPhone }</td>
-                    </tr>
-                  <tr>
-                    <td height="20" align="right" bgcolor="#FFFFFF">联系地址:</td>
-                    <td colspan="2" bgcolor="#FFFFFF">${client.clientAdd }</td>
-                  </tr>
-                  <tr>
-                    <td height="20" align="right" bgcolor="#FFFFFF">添加日期:</td>
-                    <td colspan="2" bgcolor="#FFFFFF">${client.clientDate }</td>
-                  </tr>
-               
-                  <tr>
-				    <td height="85" align="right" bgcolor="#FFFFFF">公司背景:</td>
-				    <td colspan="2" bgcolor="#FFFFFF">${client.clientBack }</td>
-                  </tr>
-                </table></td>
-              </tr>
-            </table></td>
-        </tr>
-      </table>
-      <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
-        <tr>
-          <td height="6"><img src="images/spacer.gif" width="1" height="1" /></td>
-        </tr>
-        <tr>
-          <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">
-              <tr>
-                
-                
-                <td width="1%"><table width="20" border="0" cellspacing="0" cellpadding="0">
-                    <tr>
-                      <td width="1%"><input name="textfield3" type="text" class="right-textfield03" size="1" /></td>
-                      <td width="87%"><input name="Submit23222" type="submit" class="right-button06" value=" " />
-                      </td>
-                    </tr>
-                </table></td>
-              </tr>
-          </table></td>
-        </tr>
-      </table></td>
-  </tr>
-</table>
-</form>
+												<tr>
+													<td height="20" colspan="2" align="center"
+														bgcolor="#EEEEEE" class="tablestyle_title">
+														&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														客户详细内容</td>
+												</tr>
+												<tr>
+													<td width="16%" height="20" align="right" bgcolor="#FFFFFF">公司名称:</td>
+													<td width="84%" colspan="2" bgcolor="#FFFFFF">${client.clientComp }</td>
+												</tr>
+												<tr>
+													<td height="20" align="right" bgcolor="#FFFFFF">联系人:</td>
+													<td colspan="2" bgcolor="#FFFFFF">${client.clientName }</td>
+												</tr>
+												<tr>
+													<td height="20" align="right" bgcolor="#FFFFFF">联系电话:</td>
+													<td colspan="2" bgcolor="#FFFFFF">${client.clientPhone }</td>
+												</tr>
+												<tr>
+													<td height="20" align="right" bgcolor="#FFFFFF">联系地址:</td>
+													<td colspan="2" bgcolor="#FFFFFF">${client.clientAdd }</td>
+												</tr>
+												<tr>
+													<td height="20" align="right" bgcolor="#FFFFFF">添加日期:</td>
+													<td colspan="2" bgcolor="#FFFFFF">${client.clientDate }</td>
+												</tr>
+
+												<tr>
+													<td height="85" align="right" bgcolor="#FFFFFF">公司背景:</td>
+													<td colspan="2" bgcolor="#FFFFFF">${client.clientBack }</td>
+												</tr>
+											</table></td>
+									</tr>
+								</table></td>
+						</tr>
+					</table>
+					<table width="95%" border="0" align="center" cellpadding="0"
+						cellspacing="0">
+						<tr>
+							<td height="6"><img src="images/spacer.gif" width="1"
+								height="1" /></td>
+						</tr>
+						<tr>
+							<td align="center" height="50px">
+								<input type="button" name="submit" id="submit" onclick="alert('打印成功')" value="打印" />
+								<input type="button" name="back" id="back" onclick="window.history.go(-1);" value="返回"/>
+							</td>
+						</tr>
+						
+					</table></td>
+			</tr>
+		</table>
+	</form>
 </body>
 </html>
