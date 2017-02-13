@@ -31,6 +31,41 @@
     <servlet-name>ClientDataServlet</servlet-name>
     <servlet-class>com.yl.servlet.ClientDataServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpSalServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpSalServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpRoleServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpRoleServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpJobServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpJobServlet</servlet-class>
+  </servlet>
+
+
+
+
+
 
 
 
@@ -55,6 +90,26 @@
   <servlet-mapping>
     <servlet-name>ClientDataServlet</servlet-name>
     <url-pattern>/ClientDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpServlet</servlet-name>
+    <url-pattern>/EmpServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpSalServlet</servlet-name>
+    <url-pattern>/EmpSalServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpAddServlet</servlet-name>
+    <url-pattern>/DoEmpAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpRoleServlet</servlet-name>
+    <url-pattern>/EmpRoleServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpJobServlet</servlet-name>
+    <url-pattern>/EmpJobServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

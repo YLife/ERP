@@ -225,13 +225,13 @@ function list(idstr){
 
 	  <!--  客户系统结束    -->
 
-	  <!--  ��Աϵͳ��ʼ    -->
+	  <!--  人员信息管理开始    -->
 	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="8%" height="12"><img name="img3" id="img3" src="../images/ico04.gif" width="8" height="11" /></td>
-                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('3');" ></a></td>
+                  <td width="8%" height="12"><img name="img3" id="img3" src="images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('3');" >人员系统</a></td>
                 </tr>
             </table></td>
           </tr>
@@ -239,20 +239,20 @@ function list(idstr){
 	  
 	  <table id="subtree3" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
         <tr>
-          <td width="9%" height="20" ><img id="xiaotu8" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listyuangong.html" target="mainFrame" class="left-font03" onClick="tupian('8');">��Ա��Ϣ�鿴</a></td>
+          <td width="9%" height="20" ><img id="xiaotu8" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="EmpServlet" target="mainFrame" class="left-font03" onClick="tupian('8');">人员信息查看</a></td>
         </tr>
 		<tr>
-          <td width="9%" height="20" ><img id="xiaotu9" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listzhiwu.htm" target="mainFrame" class="left-font03" onClick="tupian('9');">ְ����Ϣ�鿴</a></td>
+          <td width="9%" height="20" ><img id="xiaotu9" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="EmpJobServlet" target="mainFrame" class="left-font03" onClick="tupian('9');">职务信息查看</a></td>
         </tr>
 		<tr>
-          <td width="9%" height="20" ><img id="xiaotu10" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listMonthYuanGongGongZi.htm" target="mainFrame" class="left-font03" onClick="tupian('10');">Ա����������鿴</a></td>
+          <td width="9%" height="20" ><img id="xiaotu10" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="listMonthYuanGongGongZi.htm" target="mainFrame" class="left-font03" onClick="tupian('10');">员工工作情况查看</a></td>
         </tr>
       </table>
 	
-	  <!--  ��Աϵͳ����    -->
+	  <!--  人员信息管理结束    -->
 
 	   <!--  ����ϵͳ��ʼ    -->
 	   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
