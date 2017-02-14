@@ -4,7 +4,6 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -160,8 +159,6 @@ document.getElementById("aa").style.display="";
 			<input type="button" name="Submit2" value="返回" class="button" onclick="window.history.go(-1);"/></TD>
 		</TR>
 		</TABLE>
-	
-	
 	 </td>
   </tr>
   </table>

@@ -248,19 +248,19 @@ function list(idstr){
         </tr>
 		<tr>
           <td width="9%" height="20" ><img id="xiaotu10" src="images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listMonthYuanGongGongZi.htm" target="mainFrame" class="left-font03" onClick="tupian('10');">员工工作情况查看</a></td>
+          <td width="91%"><a href="EmpWorkCaseServlet" target="mainFrame" class="left-font03" onClick="tupian('10');">员工工作情况查看</a></td>
         </tr>
       </table>
 	
 	  <!--  人员信息管理结束    -->
 
-	   <!--  ����ϵͳ��ʼ    -->
+	   <!--  考勤系统开始    -->
 	   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="8%" height="12"><img name="img4" id="img4" src="../images/ico04.gif" width="8" height="11" /></td>
-                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('4');" >����ϵͳ</a></td>
+                  <td width="8%" height="12"><img name="img4" id="img4" src="images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('4');" >考勤系统</a></td>
                 </tr>
             </table></td>
           </tr>
@@ -268,24 +268,24 @@ function list(idstr){
 	  
 	  <table id="subtree4" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
 		<tr>
-          <td width="9%" height="20" ><img id="xiaotu11" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listGongZiType.htm" target="mainFrame" class="left-font03" onClick="tupian('11');">�������Ͳ鿴</a></td>
+          <td width="9%" height="20" ><img id="xiaotu11" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="EmpSalTypeServlet" target="mainFrame" class="left-font03" onClick="tupian('11');">考勤类型查看</a></td>
         </tr>
 	  	<tr>
-          <td width="9%" height="20" ><img id="xiaotu12" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="listMonthYuanGongGongZi.htm" target="mainFrame" class="left-font03" onClick="tupian('12');">Ա��������Ϣ�鿴</a></td>
+          <td width="9%" height="20" ><img id="xiaotu12" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="EmpWorkCheckServlet" target="mainFrame" class="left-font03" onClick="tupian('12');">员工考勤信息查看</a></td>
         </tr>
       </table>
 
-      <!--  ����ϵͳ����    -->
+      <!--  考勤系统结束   -->
 
-	  <!-- ����ϵͳ��ʼ -->
+	  <!-- 管理系统开始 -->
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="8%"><img name="img5" id="img5" src="../images/ico04.gif" width="8" height="11" /></td>
-                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('5');">ϵͳ����</a></td>
+                  <td width="8%"><img name="img5" id="img5" src="images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('5');">系统管理</a></td>
                 </tr>
             </table></td>
           </tr>
@@ -293,28 +293,28 @@ function list(idstr){
 
 	  <table id="subtree5" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
         <tr>
-          <td width="9%" height="20"><img id="xiaotu13" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td width="91%"><a href="register.html" target="mainFrame" class="left-font03" onClick="tupian('13');">����û�</a></td>
+          <td width="9%" height="20"><img id="xiaotu13" src="images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="empRegister.jsp" target="mainFrame" class="left-font03" onClick="tupian('13');">添加用户</a></td>
         </tr>
         <tr>
-          <td height="20"><img id="xiaotu14" src="../images/ico06.gif" width="8" height="12" /></td>
-          <td><a href="addquanxian.html" target="mainFrame" class="left-font03" onClick="tupian('14');">��ӽ�ɫ</a></td>
+          <td height="20"><img id="xiaotu14" src="images/ico06.gif" width="8" height="12" /></td>
+          <td><a href="addquanxian.html" target="mainFrame" class="left-font03" onClick="tupian('14');">添加角色</a></td>
         </tr>
       </table>
-	  <!-- ����ϵͳ����-->
+	  <!-- 管理系统结束 -->
 
 		
 
-	 <!--������Ϣ���?ʼ-->
+	 <!-- 个人信息管理开始  -->
 
 		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
 				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="8%"><img name="img9" id="img9" src="../images/ico04.gif" width="8" height="11" /></td>
+						<td width="8%"><img name="img9" id="img9" src="images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="javascript:" target="mainFrame" class="left-font03" onClick="list('9');" >���˹���</a></td>
+								<a href="javascript:" target="mainFrame" class="left-font03" onClick="list('9');" >个人管理</a></td>
 					</tr>
 				</table>
 			</td>
@@ -324,13 +324,13 @@ function list(idstr){
 		<table id="subtree9" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
 				cellspacing="0" class="left-table02">
 				<tr>
-				  <td width="9%" height="22" ><img id="xiaotu22" src="../images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="userlistmingxi.htm" target="mainFrame" class="left-font03" 
-						onClick="tupian('22');">������Ϣ�鿴</a></td>
+				  <td width="9%" height="22" ><img id="xiaotu22" src="images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="EmpDataServlet" target="mainFrame" class="left-font03" 
+						onClick="tupian('22');">个人信息查看</a></td>
 				</tr>
 				
       </table>
-		<!--  ������Ϣ����    -->
+		<!--  个人信息管理结束    -->
 
 	  </TD>
   </tr>

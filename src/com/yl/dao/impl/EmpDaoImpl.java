@@ -45,7 +45,7 @@ public class EmpDaoImpl extends DbUtil implements EmpDao {
 
 	@Override
 	public Emp queryById(Object id) {
-		String sql = "select * from emp e left join  empType t on e.typeId = t.typeId left join empJob j on e.jobId = j.jobId left join empRole r on e.roleId = r.roleId left join (sal s left join salState s1 on s.salStateId = s1.salStateId) on e.empId = s.empId where empId = ?";
+		String sql = "select * from emp e left join  empType t on e.typeId = t.typeId left join empJob j on e.jobId = j.jobId left join empRole r on e.roleId = r.roleId left join (sal s left join salState s1 on s.salStateId = s1.salStateId) on e.empId = s.empId where e.empId = ?";
 		List<Emp> list = super.excuteQuery(sql, map, id);
 		return list.size() > 0 ? list.get(0) : null;
 	}
@@ -53,8 +53,14 @@ public class EmpDaoImpl extends DbUtil implements EmpDao {
 	@Override
 	public int save(Emp entity) {
 		String sql = "insert into emp values(? , ? , ? , ? , ? , ? , ? , ? , ? , ? , ?)";
-		 System.out.println(entity.getEmpId());
 		return super.excuteUpdate(sql, entity.getEmpId() , entity.getEmpName() , entity.getEmpPwd() , entity.getEmpSex() , entity.getEmpBorn() , entity.getEmpDate() , entity.getEmpNo() , entity.getEmpPhone() , entity.getEmpType().getTypeId() , entity.getEmpJob().getJobId() , entity.getEmpRole().getRoleId());
+	}
+	
+	@Override
+	public int register(Emp entity){
+		String sql = "insert into emp(empId , empName ,empPwd) values(? ,? , ?)";
+		return super.excuteUpdate(sql, entity.getEmpId() , entity.getEmpName() , entity.getEmpPwd());
+		
 	}
 
 	@Override
@@ -65,7 +71,7 @@ public class EmpDaoImpl extends DbUtil implements EmpDao {
 
 	@Override
 	public int update(Emp entity) {
-		String sql = "update emp set empName = ? , empPwd = ? , empSex = ? , empBorn = ? , empDate = ? , empNo = ? , empPhone = ? , tyId = ? , jobId = ? , roleId = ? where empId = ?";
+		String sql = "update emp set empName = ? , empPwd = ? , empSex = ? , empBorn = ? , empDate = ? , empNo = ? , empPhone = ? , typeId = ? , jobId = ? , roleId = ? where empId = ?";
 		return super.excuteUpdate(sql, entity.getEmpName() , entity.getEmpPwd() , entity.getEmpSex() , entity.getEmpBorn() , entity.getEmpDate() , entity.getEmpNo() , entity.getEmpPhone() , entity.getEmpType().getTypeId() , entity.getEmpJob().getJobId() , entity.getEmpRole().getRoleId() , entity.getEmpId());
 	}
 

@@ -49,8 +49,7 @@ html { overflow-x: auto; overflow-y: auto; border:0;}
 
 </script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<SCRIPT language=JavaScript>
+<SCRIPT type="text/JavaScript">
 function sousuo(){
 	window.open("gaojisousuo.htm","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
 }
@@ -78,6 +77,7 @@ function link(){
 }
 
 </SCRIPT>
+</head>
 
 <body>
 <form name="fom" id="fom" method="post">
@@ -145,7 +145,7 @@ function link(){
 						<td height="20" bgcolor="#FFFFFF">${date.year - emp.empBorn.year}</td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empDate }</td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empPhone }</td>
-	                    <td bgcolor="#FFFFFF"><a href="yuangong.htm">编辑</a>&nbsp;|&nbsp;<a href="yuangongsalary.html">发工资</a></a>&nbsp;|&nbsp;<a href="yuangongxiangmu.html">项目</a></td>
+	                    <td bgcolor="#FFFFFF"><a href="EmpEditServlet?empId=${emp.empId }">编辑</a>&nbsp;|&nbsp;<a href="yuangongsalary.html">发工资</a>&nbsp;|&nbsp;<a href="yuangongxiangmu.html">项目</a></td>
 	                  </tr>
                   </c:forEach>
                 </table></td>

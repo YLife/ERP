@@ -9,5 +9,10 @@ import com.yl.vo.EmpVo;
  *
  */
 public interface EmpBiz extends BaseBiz<Emp, EmpVo>{
-	
+	/**
+	 * ×¢²áÓÃ»§
+	 * @param entity
+	 * @return
+	 */
+	int register(Emp entity);
 }

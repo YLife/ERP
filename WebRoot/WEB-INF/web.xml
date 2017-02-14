@@ -61,6 +61,102 @@
     <servlet-name>EmpJobServlet</servlet-name>
     <servlet-class>com.yl.servlet.EmpJobServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpJobDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpJobDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpWorkCaseServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpWorkCaseServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpWorkCheckServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpWorkCheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpWorkCaseDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpWorkCaseDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpWorkCheckDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpWorkCheckDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpRegisterServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpRegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpSalTypeServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpSalTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpSalTypeAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpSalTypeAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpSalTypeEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpSalTypeEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpSalTypeEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpSalTypeEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpSalSendServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpSalSendServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -110,6 +206,62 @@
   <servlet-mapping>
     <servlet-name>EmpJobServlet</servlet-name>
     <url-pattern>/EmpJobServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpJobDataServlet</servlet-name>
+    <url-pattern>/EmpJobDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpWorkCaseServlet</servlet-name>
+    <url-pattern>/EmpWorkCaseServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpWorkCheckServlet</servlet-name>
+    <url-pattern>/EmpWorkCheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpWorkCaseDataServlet</servlet-name>
+    <url-pattern>/EmpWorkCaseDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpWorkCheckDataServlet</servlet-name>
+    <url-pattern>/EmpWorkCheckDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpEditServlet</servlet-name>
+    <url-pattern>/EmpEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpEditServlet</servlet-name>
+    <url-pattern>/DoEmpEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpDataServlet</servlet-name>
+    <url-pattern>/EmpDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpRegisterServlet</servlet-name>
+    <url-pattern>/DoEmpRegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpSalTypeServlet</servlet-name>
+    <url-pattern>/EmpSalTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpSalTypeAddServlet</servlet-name>
+    <url-pattern>/DoEmpSalTypeAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpSalTypeEditServlet</servlet-name>
+    <url-pattern>/EmpSalTypeEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpSalTypeEditServlet</servlet-name>
+    <url-pattern>/DoEmpSalTypeEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpSalSendServlet</servlet-name>
+    <url-pattern>/EmpSalSendServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

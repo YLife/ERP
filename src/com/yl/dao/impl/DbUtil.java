@@ -120,7 +120,6 @@ public class DbUtil {
 			if (params != null) {
 				for (int i = 0; i < params.length; i++) {
 					stmt.setObject(i + 1, params[i]);
-					System.out.println(params[i]);
 				}
 			}
 			return stmt.executeUpdate();

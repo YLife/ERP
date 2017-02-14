@@ -49,8 +49,7 @@ html { overflow-x: auto; overflow-y: auto; border:0;}
 
 </script>
 <link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<SCRIPT language=JavaScript>
+<SCRIPT type="text/JavaScript">
 function sousuo(){
 	window.open("gaojisousuo.htm","","depended=0,alwaysRaised=1,width=800,height=510,location=0,menubar=0,resizable=0,scrollbars=0,status=0,toolbar=0");
 }
@@ -79,7 +78,7 @@ function link(){
 }
 
 </SCRIPT>
-
+</head>
 <body>
 <form name="fom" id="fom" method="post" action="EmpJobServlet">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
@@ -125,7 +124,7 @@ function link(){
 					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
 	                    <td height="20" bgcolor="#FFFFFF">${empJob.jobName }</td>
 	                    <td bgcolor="#FFFFFF">&nbsp;</td>
-	                    <td bgcolor="#FFFFFF"><a href="empJobDataServlet">查看</a></td>
+	                    <td bgcolor="#FFFFFF"><a href="EmpJobDataServlet?jobId=${empJob.jobId }">查看</a></td>
 	                  </tr>
                   </c:forEach>
                 </table></td>

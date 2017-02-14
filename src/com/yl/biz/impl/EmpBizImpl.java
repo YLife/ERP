@@ -40,4 +40,9 @@ public class EmpBizImpl implements EmpBiz {
 		return (dao.getCount(vo) - 1) / pageSize + 1;
 	}
 
+	@Override
+	public int register(Emp entity) {
+		return dao.register(entity);
+	}
+
 }

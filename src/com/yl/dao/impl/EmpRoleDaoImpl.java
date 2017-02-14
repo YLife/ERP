@@ -53,7 +53,7 @@ public class EmpRoleDaoImpl extends DbUtil implements EmpRoleDao {
 		@Override
 		public EmpRole resultMapping(ResultSet rs) {
 			try {
-				EmpRole entity = new EmpRole(rs.getInt("empId"), rs.getString("empName"));
+				EmpRole entity = new EmpRole(rs.getInt("roleId"), rs.getString("roleName"));
 				return entity;
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block

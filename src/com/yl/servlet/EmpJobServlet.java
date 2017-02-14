@@ -23,7 +23,6 @@ public class EmpJobServlet extends HttpServlet {
 		String currentPage = request.getParameter("currentPage");
 		String pageSize = request.getParameter("pageSize");
 		String jumpPage = request.getParameter("jumpPage");
-		System.out.println(jumpPage);
 		int page = currentPage != null ? Integer.parseInt(currentPage) : 1;
 		int size = pageSize != null ? Integer.parseInt(pageSize) : 5;
 		if (jumpPage != null && !"".equals(jumpPage)) {

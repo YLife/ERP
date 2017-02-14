@@ -30,7 +30,6 @@ public class EmpServlet extends HttpServlet {
 		String jumpPage = request.getParameter("jumpPage");
 		if (jumpPage != null && !"".equals(jumpPage)) {
 			page = Integer.parseInt(jumpPage);
-			System.out.println(page);
 		}
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
 		String begin = request.getParameter("begin");
