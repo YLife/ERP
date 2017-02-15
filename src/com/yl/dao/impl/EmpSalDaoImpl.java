@@ -38,8 +38,8 @@ public class EmpSalDaoImpl extends DbUtil implements EmpSalDao {
 
 	@Override
 	public int update(EmpSal entity) {
-		String sql = "update sal set baseSal = ? , bonus = ? , other = ? ,remark = ? where empId = ?";
-		return super.excuteUpdate(sql, entity.getBaseSal() , entity.getBonus() , entity.getOther(), entity.getRemark() , entity.getEmpId());
+		String sql = "update sal set baseSal = ? , bonus = ? , other = ? ,remark = ? , salStateId = ? where empId = ?";
+		return super.excuteUpdate(sql, entity.getBaseSal() , entity.getBonus() , entity.getOther(), entity.getRemark() , entity.getSalState().getSalStateId(), entity.getEmpId());
 	}
 
 	@Override

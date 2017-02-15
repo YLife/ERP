@@ -42,4 +42,9 @@ public class ClientBizImpl implements ClientBiz {
 		return (dao.getCount(vo) - 1) / pageSize + 1;
 	}
 
+	@Override
+	public Client findByClientComp(String clientComp) {
+		return dao.findByClientComp(clientComp);
+	}
+
 }

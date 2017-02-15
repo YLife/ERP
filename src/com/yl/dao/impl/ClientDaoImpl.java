@@ -80,4 +80,11 @@ public class ClientDaoImpl extends DbUtil implements ClientDao {
 			return null;
 		}
 	};
+
+	@Override
+	public Client findByClientComp(String clientComp) {
+		String sql = "select * from client where clientComp = ?";
+		List<Client> list = super.excuteQuery(sql, map, clientComp);
+		return list.size() > 0 ? list.get(0) : null;
+	}
 }

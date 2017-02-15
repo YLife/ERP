@@ -45,4 +45,9 @@ public class EmpBizImpl implements EmpBiz {
 		return dao.register(entity);
 	}
 
+	@Override
+	public Emp findByEmpName(String empName) {
+		return dao.findByEmpName(empName);
+	}
+
 }

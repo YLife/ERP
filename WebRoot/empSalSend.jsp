@@ -34,7 +34,7 @@ document.getElementById("aa").style.display="";
 </head>
 
 <body class="ContentBody">
-<form action="DoEmpSalSendServlet" method="post" enctype="multipart/form-data" name="form" target="sypost" >
+<form action="DoEmpSalSendServlet" method="post" name="form" target="sypost" >
 <div class="MainDiv">
   <table width="99%" border="0" cellpadding="0" cellspacing="0" class="CContent">
     <tr>
@@ -50,17 +50,17 @@ document.getElementById("aa").style.display="";
               <legend>工资信息</legend>
               <table border="0" cellpadding="2" cellspacing="1" style="width:100%">
                 <tr>
-                  <td nowrap align="right" width="15%">奖金:</td>
-                  <td width="35%"><input name='txt3' type="password" class="text" style="width:154px" value="" /></td>
-                  <td align="right" width="16%">其他奖金:</td>
-                  <td width="34%"><input name='txt32' type="password" class="text" style="width:154px" value="" />
+                  <td nowrap align="right" width="15%">基本工资:</td>
+                  <td width="35%"><input name='txt3' type="text" class="text" style="width:154px" value="${emp.empSal.baseSal }" /></td>
+                  <td align="right" width="16%">奖金:</td>
+                  <td width="34%"><input name='txt32' type="text" class="text" style="width:154px" value="${emp.empSal.bonus + emp.empSal.other }" />
                       <span class="red">*</span></td>
                 </tr>
                 <tr>
                   <td width="15%" nowrap align="right">处罚扣除金额:</td>
-                  <td width="35%"><input class="text" name='datevalue2' style="width:154px" value=""  /></td>
+                  <td width="35%"><input class="text" name='datevalue2' style="width:154px" value="${emp.empSal.fine }"  /></td>
                   <td align="right">发放类型:</td>
-                  <td><select name="salTypeName" >
+                  <td><select name="salType" >
                       <option  selected="selected">==请选择==</option>
                       <option>现金</option>
                       <option>打卡</option>
@@ -90,7 +90,7 @@ document.getElementById("aa").style.display="";
                 </tr>
                 <tr>
                  <td align="right">描述:</td>
-					 <td colspan="3">&nbsp;</td>
+					 <td colspan="3">&nbsp;<input type="text" name="empId" value="${emp.empId }"/></td>
                 </tr>
               </table>
               <br />
@@ -99,9 +99,9 @@ document.getElementById("aa").style.display="";
       </table></td>
     </tr>
     <tr>
-      <td colspan="2" align="center" height="50px"><input type="submit" name="Submit2" value="保存" class="button" onclick="alert('保存成功');"/>
+      <td colspan="2" align="center" height="50px"><input type="submit" name="Submit2" value="确认发放" class="button"/>
         <input type="button" name="Submit2" value="返回" class="button" onclick="window.history.go(-1);"/>
-        <textarea name="textarea" cols="100" rows="8"></textarea></td>
+        <textarea name="salRemark" cols="100" rows="8"></textarea></td>
     </tr>
   </table>
   </td>

@@ -152,7 +152,7 @@ function unselectAll(){
 	                    <td bgcolor="#FFFFFF"><div align="center">${emp.empSal.baseSal + emp.empSal.bonus + emp.empSal.other - emp.empSal.fine }</div></td>
 	                    <td bgcolor="#FFFFFF"><div align="center" class="top-font01">${emp.empSal.salState.salState }</div></td>
 	                    <td bgcolor="#FFFFFF"><div align="center">韦华</div></td>
-	                    <td bgcolor="#FFFFFF"><div align="center"><a href="EmpWorkCheckDataServlet?empId=${emp.empId }">查看</a>&nbsp;|&nbsp;<c:if test="${emp.empSal.salState.salState == '已发放' }">已发</c:if><c:if test="${emp.empSal.salState.salState != '已发放' }"><a href="#">发放</a></c:if></div></td>
+	                    <td bgcolor="#FFFFFF"><div align="center"><a href="EmpWorkCheckDataServlet?empId=${emp.empId }">查看</a>&nbsp;|&nbsp;<c:if test="${emp.empSal.salState.salState == '已发放' }">已发</c:if><c:if test="${emp.empSal.salState.salState != '已发放' }"><a href="EmpSalSendServlet?empId=${emp.empId }">发放</a></c:if></div></td>
 	                  </tr>
 				  </c:forEach>
                   

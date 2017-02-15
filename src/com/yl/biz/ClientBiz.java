@@ -9,5 +9,10 @@ import com.yl.vo.ClientVo;
  *
  */
 public interface ClientBiz extends BaseBiz<Client, ClientVo>{
-	
+	/**
+	 * 根据客户公司名称查询客户信息
+	 * @param clientName
+	 * @return
+	 */
+	Client findByClientComp(String clientComp);
 }

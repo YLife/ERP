@@ -145,6 +145,62 @@
     <servlet-name>EmpSalSendServlet</servlet-name>
     <servlet-class>com.yl.servlet.EmpSalSendServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpSalSendServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpSalSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProModServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProModServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProModAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProModAddServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
 
 
 
@@ -262,6 +318,38 @@
   <servlet-mapping>
     <servlet-name>EmpSalSendServlet</servlet-name>
     <url-pattern>/EmpSalSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpSalSendServlet</servlet-name>
+    <url-pattern>/DoEmpSalSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProServlet</servlet-name>
+    <url-pattern>/ProServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProAddServlet</servlet-name>
+    <url-pattern>/DoProAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProEditServlet</servlet-name>
+    <url-pattern>/DoProEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProEditServlet</servlet-name>
+    <url-pattern>/ProEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProDataServlet</servlet-name>
+    <url-pattern>/ProDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProModServlet</servlet-name>
+    <url-pattern>/ProModServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProModAddServlet</servlet-name>
+    <url-pattern>/ProModAddServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

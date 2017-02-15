@@ -96,4 +96,11 @@ public class EmpDaoImpl extends DbUtil implements EmpDao {
 			return emp;
 		}
 	};
+
+	@Override
+	public Emp findByEmpName(String empName) {
+		String sql = "select * from emp e left join  empType t on e.typeId = t.typeId left join empJob j on e.jobId = j.jobId left join empRole r on e.roleId = r.roleId left join (sal s left join salState s1 on s.salStateId = s1.salStateId) on e.empId = s.empId where e.empName = ?";
+		List<Emp> list = super.excuteQuery(sql, map, empName);
+		return list.size() > 0 ? list.get(0) : null;
+	}
 }

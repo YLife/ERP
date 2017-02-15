@@ -10,4 +10,11 @@ public interface EmpDao extends BaseDao<Emp, EmpVo>{
 	 * @return
 	 */
 	int register(Emp entity);
+	
+	/**
+	 * 根据员工名字查询员工信息
+	 * @param empName
+	 * @return
+	 */
+	Emp findByEmpName(String empName);
 }

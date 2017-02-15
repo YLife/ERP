@@ -15,4 +15,11 @@ public interface EmpBiz extends BaseBiz<Emp, EmpVo>{
 	 * @return
 	 */
 	int register(Emp entity);
+	
+	/**
+	 * 通过员工姓名查询员工信息
+	 * @param empName
+	 * @return
+	 */
+	Emp findByEmpName(String empName);
 }

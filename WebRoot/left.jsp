@@ -131,7 +131,7 @@ function list(idstr){
             <td height="29">
 				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="8%"><img name="img7" id="img7" src="../images/ico04.gif" width="8" height="11" /></td>
+						<td width="8%"><img name="img7" id="img7" src="images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
 								<a href="javascript:" target="mainFrame" class="left-font03" onClick="list('7');" >消息管理</a></td>
 					</tr>
@@ -167,15 +167,15 @@ function list(idstr){
 		<!--  消息系统结束    -->
 
 
-
+		<!-- 项目系统开始  -->
         <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
 				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="8%"><img name="img1" id="img1" src="../images/ico04.gif" width="8" height="11" /></td>
+						<td width="8%"><img name="img1" id="img1" src="images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="javascript:" target="mainFrame" class="left-font03" onClick="list('1');" ></a></td>
+								<a href="javascript:" target="mainFrame" class="left-font03" onClick="list('1');" >项目系统</a></td>
 					</tr>
 				</table>
 			</td>
@@ -184,31 +184,31 @@ function list(idstr){
 		<table id="subtree1" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
 				cellspacing="0" class="left-table02">
 				<tr>
-				  <td width="9%" height="20" ><img id="xiaotu1" src="../images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listxiangmuxinxi.htm" target="mainFrame" class="left-font03" onClick="tupian('1');">��Ŀ����Ϣ�鿴</a></td>
+				  <td width="9%" height="20" ><img id="xiaotu1" src="images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="ProServlet" target="mainFrame" class="left-font03" onClick="tupian('1');">项目基本信息查看</a></td>
 				</tr>
 				<tr>
-				  <td width="9%" height="20" ><img id="xiaotu5" src="../images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listmokuai.htm" target="mainFrame" class="left-font03" onClick="tupian('5');">��Ŀģ����Ϣ�鿴</a></td>
+				  <td width="9%" height="20" ><img id="xiaotu5" src="images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="ProModServlet" target="mainFrame" class="left-font03" onClick="tupian('5');">项目模块信息查看</a></td>
 				</tr>
 				<tr>
-				  <td width="9%" height="20" ><img id="xiaotu3" src="../images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listgongneng.htm" target="mainFrame" class="left-font03" onClick="tupian('3');">��Ŀ������Ϣ�鿴</a></td>
+				  <td width="9%" height="20" ><img id="xiaotu3" src="images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="listgongneng.htm" target="mainFrame" class="left-font03" onClick="tupian('3');">项目功能信息查看</a></td>
 				</tr>
 				<tr>
-				  <td width="9%" height="20" ><img id="xiaotu6" src="../images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listshangchuan.htm" target="mainFrame" class="left-font03" onClick="tupian('6');">��Ŀ�ϴ���Ϣ�鿴</a></td>
+				  <td width="9%" height="20" ><img id="xiaotu6" src="images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="listshangchuan.htm" target="mainFrame" class="left-font03" onClick="tupian('6');">项目上传信息查看</a></td>
 				</tr>
 				
       </table>
-		<!--  ��Ŀϵͳ����    -->
+		<!-- 项目系统结束   -->
 
 	  <!--  客户系统开始   -->
 	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="8%" height="12"><img name="img2" id="img2" src="../images/ico04.gif" width="8" height="11" /></td>
+                  <td width="8%" height="12"><img name="img2" id="img2" src="images/ico04.gif" width="8" height="11" /></td>
                   <td width="92%"><a href="javascript:" target="mainFrame" class="left-font03" onClick="list('2');" >客户系统</a></td>
                 </tr>
             </table></td>
