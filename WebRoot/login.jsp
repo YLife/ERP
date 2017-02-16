@@ -19,6 +19,12 @@ body {
 -->
 </style>
 <link href="css/css.css" rel="stylesheet" type="text/css" />
+<script>
+		function getImage(){
+			var vImg = document.getElementById('vImg');
+			vImg.src = 'ValidateServlet?nocache='+ Math.random();
+		};
+</script>
 </head>
 
 <body>
@@ -55,11 +61,11 @@ body {
       </tr>
       <tr>
         <td height="35" class="login-text02">验证图片：<br /></td>
-        <td><img src="images/pic05.gif" width="109" height="40" /> <a href="#" class="login-text03">看不清楚，换一张</a></td>
+        <td><img src="ValidateServlet" id="vImg" width="109" height="40" /> <a href="javascript:;" class="login-text03" onclick="getImage()">看不清楚，换一张</a></td>
       </tr>
       <tr>
         <td height="35" class="login-text02">请输入验证码：</td>
-        <td><input name="valicateName" type="text" size="30" /></td>
+        <td><input name="validateName" type="text" size="30" /></td>
       </tr>
       <tr>
         <td height="35">&nbsp;</td>
