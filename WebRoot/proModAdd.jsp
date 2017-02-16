@@ -27,9 +27,9 @@ document.getElementById("aa").style.display="";
 
 
 function link(){
-alert('保存成功！');
+	alert('保存成功！');
     document.getElementById("fom").action="xuqiumingxi.htm";
-   document.getElementById("fom").submit();
+   	document.getElementById("fom").submit();
 }
 
 
@@ -55,12 +55,7 @@ alert('保存成功！');
 		<table border="0" cellpadding="0" cellspacing="0" style="width:100%">	
 		
 		<tr align="center">
-          <td class="TablePanel"><select name="select5">
-          	  <option>==请选择==</option>
-          	  <c:forEach items="${list1 }" var="pro1">
-	              <option>${pro1.proName }</option>         	  
-          	  </c:forEach>
-          </select></td>
+          <td class="TablePanel"></td>
 		  </tr>
 		<TR>
 			<TD width="100%">
@@ -70,44 +65,31 @@ alert('保存成功！');
 					 
 					  <tr>
 					    <td nowrap align="right" width="13%">模块名字:</td>
-					    <td width="46%"><input name="text" class="text" style="width:300px" type="text" size="40" />
+					    <td width="46%"><input name="modName" class="text" style="width:250px" type="text" size="40" />
 				        <span class="red"> *</span></td>
-					    <td align="right" width="9%"></td>
-					    <td width="32%">&nbsp;</td>
-					    </tr>
-					  <tr>
-					    
 					    <td align="right">所属项目:</td>
-					    <td><select name="select7" >
+					    <td><select name="proId" >
                           <option>==请选择==</option>
 			          	  <c:forEach items="${list1 }" var="pro1">
-				              <option>${pro1.proName }</option>         	  
+				              <option value="pro1.proId">${pro1.proName }</option>         	  
 			          	  </c:forEach>
                         </select></td>
 					  </tr>
+					  
 					   <tr>
-					    <td nowrap align="right">����ִ����:</td>
-					    <td><select name="select2" >
-                          <option  selected="selected">==��ѡ��==</option>
-                          <option>ĳĳĳ</option>
-                          <option>һ��</option>
-                          <option>��Ҫ</option>
-                          <option>��</option>
-                          <option>�ܼ�</option>
-                        </select></td>
-					    <td align="right">���ȼ�:</td>
-					    <td><select name="select" >
-                          <option  selected="selected">==��ѡ��==</option>
-                          <option>�ݲ�</option>
-                          <option>һ��</option>
-                          <option>��Ҫ</option>
-                          <option>��</option>
-                          <option>�ܼ�</option>
+					    <td nowrap align="right">任务执行人:</td>
+					    <td><input name="empName" class="text" style="width:250px" type="text" size="40" /></td>
+					    <td align="right">优先级:</td>
+					    <td><select name="modPriorityId" >
+                          <option  selected="selected">==请选择==</option>
+                          <c:forEach items="${list2 }" var="pri">
+	                          <option value="${pri.priorityId }">${pri.priorityName }</option>
+                          </c:forEach>
                         </select></td>
 					  </tr>
 					  <tr>
-					    <td nowrap align="right" height="120px">ģ������:</td>
-					    <td colspan="3"><textarea id="textarea" name="textarea" rows="5" cols="80"></textarea></td>
+					    <td nowrap align="right" height="120px">模块描述:</td>
+					    <td colspan="3"><textarea id="modRemark" name="modRemark" rows="5" cols="80"></textarea></td>
 					    </tr>
 						
 					  </table>
@@ -129,9 +111,9 @@ alert('保存成功！');
 		
 		<TR>
 			<TD colspan="2" align="center" height="50px">
-			<input type="button" name="Submit" value="����" class="button" onclick="link();"/>��
+			<input type="submit" name="Submit" value="保存" class="button"/>
 			
-			<input type="button" name="Submit2" value="����" class="button" onclick="window.history.go(-1);"/></TD>
+			<input type="button" name="Submit2" value="返回" class="button" onclick="window.history.go(-1);"/></TD>
 		</TR>
 		</TABLE>
 	

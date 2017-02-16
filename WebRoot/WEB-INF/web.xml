@@ -193,6 +193,118 @@
     <servlet-name>ProModAddServlet</servlet-name>
     <servlet-class>com.yl.servlet.ProModAddServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProModAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProModAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProModEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProModEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProModDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProModDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProModEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProModEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProFunServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProFunServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProFunAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProFunAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProFunAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProFunAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProFunEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProFunEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoProFunEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoProFunEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProFunDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProFunDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TaskServlet</servlet-name>
+    <servlet-class>com.yl.servlet.TaskServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TaskEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.TaskEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoTaskEditServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoTaskEditServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TaskDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.TaskDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TaskAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.TaskAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoTaskAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoTaskAddServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -350,6 +462,70 @@
   <servlet-mapping>
     <servlet-name>ProModAddServlet</servlet-name>
     <url-pattern>/ProModAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProModAddServlet</servlet-name>
+    <url-pattern>/DoProModAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProModEditServlet</servlet-name>
+    <url-pattern>/ProModEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProModDataServlet</servlet-name>
+    <url-pattern>/ProModDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProModEditServlet</servlet-name>
+    <url-pattern>/DoProModEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProFunServlet</servlet-name>
+    <url-pattern>/ProFunServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProFunAddServlet</servlet-name>
+    <url-pattern>/ProFunAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProFunAddServlet</servlet-name>
+    <url-pattern>/DoProFunAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProFunEditServlet</servlet-name>
+    <url-pattern>/ProFunEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoProFunEditServlet</servlet-name>
+    <url-pattern>/DoProFunEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProFunDataServlet</servlet-name>
+    <url-pattern>/ProFunDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TaskServlet</servlet-name>
+    <url-pattern>/TaskServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TaskEditServlet</servlet-name>
+    <url-pattern>/TaskEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoTaskEditServlet</servlet-name>
+    <url-pattern>/DoTaskEditServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TaskDataServlet</servlet-name>
+    <url-pattern>/TaskDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TaskAddServlet</servlet-name>
+    <url-pattern>/TaskAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoTaskAddServlet</servlet-name>
+    <url-pattern>/DoTaskAddServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

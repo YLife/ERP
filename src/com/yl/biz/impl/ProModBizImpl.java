@@ -6,6 +6,7 @@ import com.yl.biz.ProModBiz;
 import com.yl.dao.ProModDao;
 import com.yl.dao.impl.ProModDaoImpl;
 import com.yl.entity.ProMod;
+import com.yl.entity.ProMod1;
 import com.yl.vo.ProModVo;
 
 public class ProModBizImpl implements ProModBiz {
@@ -38,6 +39,11 @@ public class ProModBizImpl implements ProModBiz {
 	@Override
 	public int getTotalPage(int pageSize, ProModVo vo) {
 		return (dao.getCount(vo) - 1) / pageSize + 1;
+	}
+
+	@Override
+	public List<ProMod1> findAlls() {
+		return dao.findAlls();
 	}
 
 }

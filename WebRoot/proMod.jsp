@@ -136,7 +136,7 @@ function link(){
                     <td>${proMod.pro1.proName }</td>
                     <td>${proMod.emp1.empName }</td>
                     <td>${proMod.modPriority.modPriorityName }</td>
-                    <td><a href="editmokuai.htm">编辑|</a><a href="listmokuaimingxi.htm">查看</a>
+                    <td><a href="ProModEditServlet?modId=${proMod.modId }">编辑|</a><a href="ProModDataServlet?modId=${proMod.modId }">查看</a>
 					</td>
                   </tr>
 				  </c:forEach>

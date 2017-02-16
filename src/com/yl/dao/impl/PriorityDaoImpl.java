@@ -13,7 +13,8 @@ public class PriorityDaoImpl extends DbUtil implements PriorityDao {
 
 	@Override
 	public List<Priority> queryAll(int currentPage, int pageSize, PriorityVo vo) {
-		return null;
+		String sql = "select * from priority";
+		return super.excuteQuery(sql, map);
 	}
 
 	@Override

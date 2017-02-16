@@ -39,7 +39,6 @@ public class ProServlet extends HttpServlet {
 		}
 		List<Pro> list = biz.findAll(page, size, vo);
 		int totalPage = biz.getTotalPage(size, vo);
-		System.out.println(begin);
 		request.setAttribute("list", list);
 		request.setAttribute("totalPage", totalPage);
 		request.setAttribute("currentPage", page);

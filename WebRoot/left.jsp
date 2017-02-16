@@ -114,11 +114,11 @@ function list(idstr){
 				cellspacing="0" class="left-table02">
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu20" src="images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="addrenwu.htm" target="mainFrame" class="left-font03" onClick="tupian('20');">创建任务</a></td>
+				  <td width="91%"><a href="TaskAddServlet" target="mainFrame" class="left-font03" onClick="tupian('20');">创建任务</a></td>
 				</tr>
 				<tr>
 				  <td width="9%" height="21" ><img id="xiaotu21" src="images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listrenwu.htm" target="mainFrame" class="left-font03" onClick="tupian('21');">任务消息查看</a></td>
+				  <td width="91%"><a href="TaskServlet" target="mainFrame" class="left-font03" onClick="tupian('21');">任务消息查看</a></td>
 				</tr>
       </table>
 		<!--  任务系统结束    -->
@@ -193,11 +193,11 @@ function list(idstr){
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu3" src="images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listgongneng.htm" target="mainFrame" class="left-font03" onClick="tupian('3');">项目功能信息查看</a></td>
+				  <td width="91%"><a href="ProFunServlet" target="mainFrame" class="left-font03" onClick="tupian('3');">项目功能信息查看</a></td>
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu6" src="images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="listshangchuan.htm" target="mainFrame" class="left-font03" onClick="tupian('6');">项目上传信息查看</a></td>
+				  <td width="91%"><a href="proUpload.jsp" target="mainFrame" class="left-font03" onClick="tupian('6');">项目上传信息查看</a></td>
 				</tr>
 				
       </table>

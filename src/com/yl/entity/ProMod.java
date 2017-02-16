@@ -1,7 +1,6 @@
 package com.yl.entity;
 
 import java.util.Date;
-
 /**
  * 封装项目模块信息
  * @author Mr.Yang

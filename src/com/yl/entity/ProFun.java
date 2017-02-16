@@ -1,4 +1,7 @@
 package com.yl.entity;
+
+import java.util.Date;
+
 /**
  * 功能信息
  * @author Mr.Yang
@@ -7,21 +10,25 @@ package com.yl.entity;
 public class ProFun {
 	private int funId;
 	private String funName;
-	private int modId;
-	private int empId;
+	private ProMod1 mod1;
+	private Emp1 emp1;
+	private FunPriority funPriority;
+	private Date createDate;
 	private String remark;
 	
 	public ProFun() {
 		super();
 	}
 
-	public ProFun(int funId, String funName, int modId, int empId,
-		String remark) {
+	public ProFun(int funId, String funName, ProMod1 mod1, Emp1 emp1,
+			FunPriority funPriority, Date createDate, String remark) {
 		super();
 		this.funId = funId;
 		this.funName = funName;
-		this.modId = modId;
-		this.empId = empId;
+		this.mod1 = mod1;
+		this.emp1 = emp1;
+		this.funPriority = funPriority;
+		this.createDate = createDate;
 		this.remark = remark;
 	}
 
@@ -41,20 +48,36 @@ public class ProFun {
 		this.funName = funName;
 	}
 
-	public int getModId() {
-		return modId;
+	public ProMod1 getMod1() {
+		return mod1;
 	}
 
-	public void setModId(int modId) {
-		this.modId = modId;
+	public void setMod1(ProMod1 mod1) {
+		this.mod1 = mod1;
 	}
 
-	public int getEmpId() {
-		return empId;
+	public Emp1 getEmp1() {
+		return emp1;
 	}
 
-	public void setEmpId(int empId) {
-		this.empId = empId;
+	public void setEmp1(Emp1 emp1) {
+		this.emp1 = emp1;
+	}
+
+	public FunPriority getFunPriority() {
+		return funPriority;
+	}
+
+	public void setFunPriority(FunPriority funPriority) {
+		this.funPriority = funPriority;
+	}
+
+	public Date getCreateDate() {
+		return createDate;
+	}
+
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
 
 	public String getRemark() {
@@ -64,5 +87,4 @@ public class ProFun {
 	public void setRemark(String remark) {
 		this.remark = remark;
 	}
-
 }

@@ -1,7 +1,6 @@
 package com.yl.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -19,7 +18,6 @@ public class EmpDataServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html");
-		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		String empId = (String)session.getAttribute("empId");
 		Emp emp = biz.findById(Integer.parseInt(empId));
