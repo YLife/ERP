@@ -73,6 +73,11 @@ function unselectAll(){
 function link(){
    window.location.href="clientAdd.jsp";
 }
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "ClientDelServlet";
+	 fom.submit();
+}
 </script>
 </head>
 
@@ -105,7 +110,7 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" onclick="link();" /> 
+		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" onclick="del();" /> 
 		           <input name="Submit" type="button" class="right-button08" value="添加人员信息" onclick="link();" />
 		           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 	              </td>
@@ -127,8 +132,8 @@ function link(){
                     <td width="11%" align="center" bgcolor="#EEEEEE">操作</td>
                   </tr>
                   <c:forEach items="${list }" var="client">
-	                  <tr>
-					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
+	                  <tr align="center">
+					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${client.clientId }"/></td>
 						<td height="20" bgcolor="#FFFFFF">${client.clientComp }</td>
 	                    <td bgcolor="#FFFFFF">${client.clientName }</td>
 	                    <td height="20" bgcolor="#FFFFFF">${client.clientPhone }</td>
@@ -145,7 +150,7 @@ function link(){
       </table>
       <table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
         <tr>
-          <td height="6"><img src="../images/spacer.gif" width="1" height="1" /></td>
+          <td height="6"><img src="images/spacer.gif" width="1" height="1" /></td>
         </tr>
         <tr>
           <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">

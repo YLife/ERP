@@ -112,7 +112,7 @@ function link(){
 					                  <tr>
                     <td height="20" colspan="4" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;职位列表&nbsp;</td>
                     </tr>
-                  <tr>
+                  <tr align="center">
 				    <td width="5%" align="center" bgcolor="#EEEEEE">选择</td>
                     <td width="21%" height="20" align="center" bgcolor="#EEEEEE">职位名称</td>
                     <td width="10%" align="center" bgcolor="#EEEEEE">备注</td>
@@ -120,7 +120,7 @@ function link(){
                   </tr>
                   <c:forEach items="${list }" var="empJob">
                   	  <input type="hidden" name="jobId" value="${empJob.jobId }"/>
-	                  <tr>
+	                  <tr align="center">
 					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
 	                    <td height="20" bgcolor="#FFFFFF">${empJob.jobName }</td>
 	                    <td bgcolor="#FFFFFF">&nbsp;</td>

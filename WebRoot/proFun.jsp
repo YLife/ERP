@@ -76,7 +76,11 @@ function unselectAll(){
 function link(){
 	window.location.href="ProFunAddServlet";
 }
-
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "ProFunDelServlet";
+	 fom.submit();
+}
 </SCRIPT>
 
 <body>
@@ -104,8 +108,8 @@ function link(){
         <tr>
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
-               <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();"全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选功能" />
+               <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
+	              <input name="Submit" type="button" class="right-button08" value="删除所选功能" onclick="del()"/>
 	              <input name="Submit2" type="button" class="right-button08" value="添加功能" onclick="link();"/></td>
           	 </tr>
               <tr>
@@ -114,8 +118,8 @@ function link(){
 				 <tr class="CTitle" >
                     	<td height="22" colspan="8" align="center" style="font-size:16px">功能详细列表</td>
                   </tr>
-                  <tr bgcolor="#EEEEEE">
-				    <td width="4%" align="center" height="30">选择</td>
+                  <tr bgcolor="#EEEEEE" align="center">
+				    <td width="4%"  height="30">选择</td>
                     <td width="10%">功能名称</td>
 					<td width="10%">创建时间</td>
                     <td width="10%">所属项目</td>
@@ -124,9 +128,9 @@ function link(){
 					<td width="5%">优先级</td>
 					<td width="12%">操作</td>
                   </tr>
-                  <c:forEach items="${list }" var="proFun">
-	                  <tr bgcolor="#FFFFFF">
-					    <td height="20"><input type="checkbox" name="delid"/></td>
+                  <c:forEach items="${list }" var="proFun" >
+	                  <tr bgcolor="#FFFFFF" align="center">
+					    <td height="20"><input type="checkbox" name="delid" value="${proFun.funId }"/></td>
 	                    <td>${proFun.funName }</td>
 	                    <td bgcolor="#FFFFFF">${proFun.createDate }</td>
 	                    <td bgcolor="#FFFFFF">${proFun.mod1.pro1.proName }</td>

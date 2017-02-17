@@ -137,7 +137,9 @@ function link(){
 			
 				<tr>
 				    <td align="right" bgcolor="#FFFFFF"></td>
-                    <td bgcolor="#FFFFFF"><input type="submit" value="保存"><input type="button" value="返回" style="margin-left: 15px;" onclick="window.history.go(-1)"></td>
+                    <td bgcolor="#FFFFFF">
+                    	<input type="button" value="打印" style="margin-left: 15px;" onclick="alert('打印成功！')"/>
+                    	<input type="button" value="返回" style="margin-left: 15px;" onclick="window.history.go(-1)"/></td>
                     </tr>
 					
                 </table></td>

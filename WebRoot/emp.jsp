@@ -120,7 +120,7 @@ function link(){
 					                  <tr>
                     <td height="20" colspan="15" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 工资详细列表 &nbsp;</td>
                     </tr>
-                  <tr>
+                  <tr align="center">
 				    <td width="6%" align="center" bgcolor="#EEEEEE">选择</td>
 					 <td width="9%" height="20" align="center" bgcolor="#EEEEEE">唯一编号</td>
                     <td width="9%" align="center" bgcolor="#EEEEEE">真实姓名</td>
@@ -134,7 +134,7 @@ function link(){
                     <td width="19%" align="center" bgcolor="#EEEEEE">操作</td>
                   </tr>
                   <c:forEach items="${list }" var="emp">
-	                  <tr>
+	                  <tr align="center">
 					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empId }</td>
 	                    <td bgcolor="#FFFFFF">${emp.empName }</td>

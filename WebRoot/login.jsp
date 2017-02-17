@@ -28,6 +28,7 @@ body {
 </head>
 
 <body>
+<form action="CheckServlet" method="post">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td height="147" background="images/top02.gif"><img src="images/top03.gif" width="776" height="147" /></td>
@@ -52,8 +53,8 @@ body {
     </table></td>
     <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <td width="31%" height="35" class="login-text02">用户名称：<br /></td>
-        <td width="69%"><input name="empName" type="text" size="30" /></td>
+        <td width="31%" height="35" class="login-text02">用户账号：<br /></td>
+        <td width="69%"><input name="empId" type="text" size="30" /></td>
       </tr>
       <tr>
         <td height="35" class="login-text02">密码：<br /></td>
@@ -65,15 +66,16 @@ body {
       </tr>
       <tr>
         <td height="35" class="login-text02">请输入验证码：</td>
-        <td><input name="validateName" type="text" size="30" /></td>
+        <td><input name="validate" type="text" size="30" /></td>
       </tr>
       <tr>
         <td height="35">&nbsp;</td>
-        <td><input name="Submit2" type="submit" class="right-button01" value="确认登录" onClick="window.location='index.html'" />
-          <input name="Submit232" type="submit" class="right-button02" value="重置" /></td>
+        <td><input name="Submit2" type="submit" class="right-button01" value="确认登录"/>
+          <input name="Submit232" type="button" class="right-button02" value="重置" onclick="window.location.href='login.jsp'"/></td>
       </tr>
     </table></td>
   </tr>
 </table>
+</form>
 </body>
 </html>

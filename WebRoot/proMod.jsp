@@ -77,6 +77,11 @@ function link(){
     document.getElementById("fom").action="ProModAddServlet";
    document.getElementById("fom").submit();
 }
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "ProModDelServlet";
+	 fom.submit();
+}
 
 </SCRIPT>
 
@@ -108,7 +113,7 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选选项" />
+	              <input name="Submit" type="button" class="right-button08" value="删除所选选项" onclick="del();"/>
 	              <input name="Submit2" type="button" class="right-button08" value="添加记录" onclick="link();"/></td>
           	 </tr>
               <tr>
@@ -129,7 +134,7 @@ function link(){
                   </tr>
                   <c:forEach items="${list }" var="proMod">
                   <tr bgcolor="#FFFFFF" align="center">
-				    <td height="20"><input type="checkbox" name="delid"/></td>
+				    <td height="20"><input type="checkbox" name="delid" value="${proMod.modId }"/></td>
                     <td>${proMod.modName }</td>
 					<td>${proMod.modId }</td>
                     <td>${proMod.createDate }</td>

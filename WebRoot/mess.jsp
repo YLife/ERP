@@ -55,7 +55,7 @@ function sousuo(){
 function selectAll(){
 	var obj = document.fom.elements;
 	for (var i=0;i<obj.length;i++){
-		if (obj[i].name == "delid"){
+		if (obj[i].name == "choose"){
 			obj[i].checked = true;
 		}
 	}
@@ -64,7 +64,7 @@ function selectAll(){
 function unselectAll(){
 	var obj = document.fom.elements;
 	for (var i=0;i<obj.length;i++){
-		if (obj[i].name == "delid"){
+		if (obj[i].name == "choose"){
 			if (obj[i].checked==true) obj[i].checked = false;
 			else obj[i].checked = true;
 		}
@@ -72,7 +72,8 @@ function unselectAll(){
 }
 
 function link(){
-    window.location.href="proAdd.jsp";
+    document.getElementById("fom").action="sendxiaoxi.htm";
+   document.getElementById("fom").submit();
 }
 
 function on_load(){
@@ -86,13 +87,13 @@ function on_load(){
 }
 function del() {
 	 var fom = document.getElementById("fom");
-	 fom.action = "ProDelServlet";
+	 fom.action = "MessDelServlet";
 	 fom.submit();
-}s
+}
 </SCRIPT>
 
 <body onload="on_load()">
-<form name="fom" id="fom" method="post" action="ProServlet">
+<form name="fom" id="fom" method="post" action="MessServlet">
 <table id="mainpage" width="100%" border="0" cellspacing="0" cellpadding="0">
 
   <tr>
@@ -104,9 +105,12 @@ function del() {
 		  <tr>
 			<td width="21"><img src="images/ico07.gif" width="20" height="18" /></td>
 			<td width="550">查看内容：按时间：
-             <input name="begin" type="text" size="12" value="${begin }"/><span class="newfont06">至</span>
-			 <input name="end" type="text" size="12" value="${end }"/>	
-			 <input name="Submit" type="submit" class="right-button02" value="查询" /></td>
+			 <input name="begin" type="text" size="12" value="${begin }"/><span class="newfont06">至</span>
+			 <input name="end" type="text" size="12" value="${end }"/>
+			 	
+			 <input name="Submit" type="submit" class="right-button02" value="查询" />
+			 </td>
+			 
 		  </tr>
         </table></td>
       </tr>
@@ -120,41 +124,33 @@ function del() {
 
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选项目信息"  onclick="del();"/>
-	              <input name="Submit2" type="button" class="right-button08" value="添加项目" onclick="link();"/></td>
+	              <input name="Submit" type="button" class="right-button08" value="删除所选信息" onclick="del();"/>
+	              </td>
           	 </tr>
               <tr>
                 <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
 
 					                  <tr>
-                    <td height="20" colspan="13" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 项目信息列表 &nbsp;</td>
+                    <td height="20" colspan="6" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 消息总列表 &nbsp;</td>
                     </tr>
                   <tr>
-				    <td width="5%" align="center" bgcolor="#EEEEEE">选择</td>
-                    <td width="10%" height="20" align="center" bgcolor="#EEEEEE">项目名称</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">客户名称</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">项目经理</td>
-                    <td width="5%" align="center" bgcolor="#EEEEEE">开发人数</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">立项时间</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">更新时间</td>
-                    <td width="6%" align="center" bgcolor="#EEEEEE">任务优先级</td>
-                    <td width="5%" align="center" bgcolor="#EEEEEE">状态</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">操作</td>
+				    <td width="4%" align="center" bgcolor="#EEEEEE">选择</td>
+                    <td width="15%" height="20" align="center" bgcolor="#EEEEEE">标题</td>
+                    <td width="10%" align="center" bgcolor="#EEEEEE">发件人</td>
+                    <td width="10%" align="center" bgcolor="#EEEEEE">收件人</td>
+                    <td width="10%" align="center" bgcolor="#EEEEEE">发送时间</td>
+                    <td width="12%" align="center" bgcolor="#EEEEEE">操作</td>
                   </tr>
-                  <c:forEach items="${list }" var="pro">
+                  <c:forEach items="${list }" var="mess">
 	                  <tr align="center">
-					   <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${pro.proId }"/></td>
-	                    <td height="20" bgcolor="#FFFFFF">${pro.proName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.client.clientName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.emp.empName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.devNum }</td>
-	                    <td bgcolor="#FFFFFF">${pro.createDate }</td>
-	                    <td bgcolor="#FFFFFF">${pro.startDate }</td>
-	                    <td bgcolor="#FFFFFF">${pro.priority.priorityName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.proState.proState }</td>
-	                    <td bgcolor="#FFFFFF"><a href="ProEditServlet?proId=${pro.proId }">操作</a>|<a href="ProDataServlet?proId=${pro.proId }">查看</a></td>
+					    <td bgcolor="#FFFFFF"><input type="checkbox" name="choose" value="${mess.messId }"/></td>
+	                    <td height="20" bgcolor="#FFFFFF">${mess.messTitle }</td>
+	                    <td bgcolor="#FFFFFF">${mess.sendName }</td>
+	                    <td bgcolor="#FFFFFF">${mess.getName }</td>
+	                    <td bgcolor="#FFFFFF">${mess.sendDate }</td>
+	                    <td bgcolor="#FFFFFF"><a href="MessDataServlet?messId=${mess.messId }">查看</a></td>
 	                  </tr>
-				   </c:forEach>
+				  </c:forEach>
                 </table></td>
               </tr>
             </table></td>
@@ -168,7 +164,7 @@ function del() {
           <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">
               <tr>
                 <td width="50%">共 <span class="right-text09">${totalPage }</span> 页 | 第<span class="right-text09">${currentPage }</span> 页</td>
-                <td width="49%" align="right">[<a href="ProServlet?currentPage=1" class="right-font08">首页</a> | <c:if test="${currentPage <= 1 }">上一页</c:if><c:if test="${currentPage > 1 }"><a href="ProServlet?currentPage=${currentPage - 1 }" class="right-font08">上一页</a></c:if> | <c:if test="${currentPage < totalPage }"><a href="ProServlet?currentPage=${currentPage + 1 }" class="right-font08">下一页</a></c:if><c:if test="${currentPage >= totalPage }">下一页</c:if> | <a href="ProServlet?currentPage=${totalPage }" class="right-font08">末页</a>] 转至：</a></td>
+                <td width="49%" align="right">[<a href="MessServlet?currentPage=1" class="right-font08">首页</a> | <c:if test="${currentPage <= 1 }">上一页</c:if><c:if test="${currentPage > 1 }"><a href="MessServlet?currentPage=${currentPage - 1 }" class="right-font08">上一页</a></c:if> | <c:if test="${currentPage < totalPage }"><a href="MessServlet?currentPage=${currentPage + 1 }" class="right-font08">下一页</a></c:if><c:if test="${currentPage >= totalPage }">下一页</c:if> | <a href="MessServlet?currentPage=${totalPage }" class="right-font08">末页</a>] 转至：</td>
                 <td width="1%"><table width="20" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td width="1%"><input name="jumpPage" type="text" class="right-textfield03" size="1" value="${jumpPage }"/></td>
@@ -183,10 +179,5 @@ function del() {
   </tr>
 </table>
 </form>
-
-<div id="loadingmsg" style="width:100px; height:18px; top:0px; display:none;">
-	<img src="file:///F|/��Ŀ�����������/��Ŀ����ϵͳҳ��/images/loadon.gif" />
-</div>
-
 </body>
 </html>

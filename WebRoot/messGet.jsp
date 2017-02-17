@@ -8,7 +8,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>项目管理系统 by www.mycodes.net</title>
+<title>��Ŀ����ϵͳ by www.mycodes.net</title>
 <style type="text/css">
 <!--
 body {
@@ -72,7 +72,7 @@ function unselectAll(){
 }
 
 function link(){
-    window.location.href="proAdd.jsp";
+    window.location.href="MessSendServlet";
 }
 
 function on_load(){
@@ -86,13 +86,13 @@ function on_load(){
 }
 function del() {
 	 var fom = document.getElementById("fom");
-	 fom.action = "ProDelServlet";
+	 fom.action = "MessGetDelServlet";
 	 fom.submit();
-}s
+}
 </SCRIPT>
 
 <body onload="on_load()">
-<form name="fom" id="fom" method="post" action="ProServlet">
+<form name="fom" id="fom" method="post" action="MessGetServlet">
 <table id="mainpage" width="100%" border="0" cellspacing="0" cellpadding="0">
 
   <tr>
@@ -103,10 +103,11 @@ function del() {
 		   <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
 		  <tr>
 			<td width="21"><img src="images/ico07.gif" width="20" height="18" /></td>
-			<td width="550">查看内容：按时间：
-             <input name="begin" type="text" size="12" value="${begin }"/><span class="newfont06">至</span>
+			<td width="550">查看内容：按时间
+			 <input name="begin" type="text" size="12" value="${begin }"/><span class="newfont06">至</span>
 			 <input name="end" type="text" size="12" value="${end }"/>	
-			 <input name="Submit" type="submit" class="right-button02" value="查询" /></td>
+			 <input name="Submit" type="submit" class="right-button02" value="查询" />
+			 </td>
 		  </tr>
         </table></td>
       </tr>
@@ -119,42 +120,31 @@ function del() {
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
 
           	 <tr>
-               <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选项目信息"  onclick="del();"/>
-	              <input name="Submit2" type="button" class="right-button08" value="添加项目" onclick="link();"/></td>
+               <td height="20"><span class="newfont07">选择<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
+                 <input name="Submit3" type="button" class="right-button08" value="删除所选信息" onclick="del();"/>
+                 <input name="Submit2" type="button" class="right-button08" value="添加信息" onclick="link();"/></td>
           	 </tr>
               <tr>
                 <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
-
-					                  <tr>
-                    <td height="20" colspan="13" align="center" bgcolor="#EEEEEE"class="tablestyle_title"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 项目信息列表 &nbsp;</td>
-                    </tr>
                   <tr>
-				    <td width="5%" align="center" bgcolor="#EEEEEE">选择</td>
-                    <td width="10%" height="20" align="center" bgcolor="#EEEEEE">项目名称</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">客户名称</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">项目经理</td>
-                    <td width="5%" align="center" bgcolor="#EEEEEE">开发人数</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">立项时间</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">更新时间</td>
-                    <td width="6%" align="center" bgcolor="#EEEEEE">任务优先级</td>
-                    <td width="5%" align="center" bgcolor="#EEEEEE">状态</td>
-                    <td width="10%" align="center" bgcolor="#EEEEEE">操作</td>
+                    <td height="20" colspan="14" align="center" bgcolor="#EEEEEE"class="tablestyle_title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 接收信息列表 &nbsp;</td>
                   </tr>
-                  <c:forEach items="${list }" var="pro">
+                  <tr>
+                    <td width="14%" align="center" bgcolor="#EEEEEE">选择</td>
+                    <td width="19%" height="20" align="center" bgcolor="#EEEEEE">标题</td>
+                    <td width="20%" align="center" bgcolor="#EEEEEE">发信人</td>
+                    <td width="21%" align="center" bgcolor="#EEEEEE">查看时间</td>
+                    <td width="26%" align="center" bgcolor="#EEEEEE">操作</td>
+                  </tr>
+                  <c:forEach items="${list }" var="mess">
 	                  <tr align="center">
-					   <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${pro.proId }"/></td>
-	                    <td height="20" bgcolor="#FFFFFF">${pro.proName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.client.clientName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.emp.empName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.devNum }</td>
-	                    <td bgcolor="#FFFFFF">${pro.createDate }</td>
-	                    <td bgcolor="#FFFFFF">${pro.startDate }</td>
-	                    <td bgcolor="#FFFFFF">${pro.priority.priorityName }</td>
-	                    <td bgcolor="#FFFFFF">${pro.proState.proState }</td>
-	                    <td bgcolor="#FFFFFF"><a href="ProEditServlet?proId=${pro.proId }">操作</a>|<a href="ProDataServlet?proId=${pro.proId }">查看</a></td>
+	                    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${mess.messId }"/></td>
+	                    <td height="20" bgcolor="#FFFFFF">${mess.messTitle }</td>
+	                    <td bgcolor="#FFFFFF">${mess.sendName }</td>
+	                    <td bgcolor="#FFFFFF">${mess.sendDate }</td>
+	                    <td bgcolor="#FFFFFF"><a href="MessGetDataServlet?messId=${mess.messId }">查看</a></td>
 	                  </tr>
-				   </c:forEach>
+                  </c:forEach>
                 </table></td>
               </tr>
             </table></td>
@@ -168,7 +158,7 @@ function del() {
           <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">
               <tr>
                 <td width="50%">共 <span class="right-text09">${totalPage }</span> 页 | 第<span class="right-text09">${currentPage }</span> 页</td>
-                <td width="49%" align="right">[<a href="ProServlet?currentPage=1" class="right-font08">首页</a> | <c:if test="${currentPage <= 1 }">上一页</c:if><c:if test="${currentPage > 1 }"><a href="ProServlet?currentPage=${currentPage - 1 }" class="right-font08">上一页</a></c:if> | <c:if test="${currentPage < totalPage }"><a href="ProServlet?currentPage=${currentPage + 1 }" class="right-font08">下一页</a></c:if><c:if test="${currentPage >= totalPage }">下一页</c:if> | <a href="ProServlet?currentPage=${totalPage }" class="right-font08">末页</a>] 转至：</a></td>
+                <td width="49%" align="right">[<a href="MessGetServlet?currentPage=1" class="right-font08">首页</a> | <c:if test="${currentPage <= 1 }">上一页</c:if><c:if test="${currentPage > 1 }"><a href="MessGetServlet?currentPage=${currentPage - 1 }" class="right-font08">上一页</a></c:if> | <c:if test="${currentPage < totalPage }"><a href="MessGetServlet?currentPage=${currentPage + 1 }" class="right-font08">下一页</a></c:if><c:if test="${currentPage >= totalPage }">下一页</c:if> | <a href="MessGetServlet?currentPage=${totalPage }" class="right-font08">末页</a>] 转至：</a></td>
                 <td width="1%"><table width="20" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td width="1%"><input name="jumpPage" type="text" class="right-textfield03" size="1" value="${jumpPage }"/></td>

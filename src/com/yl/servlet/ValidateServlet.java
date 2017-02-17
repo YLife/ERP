@@ -5,7 +5,6 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.imageio.ImageIO;
 import javax.servlet.ServletException;
@@ -28,7 +27,7 @@ public class ValidateServlet extends HttpServlet {
     	int r, g, b, x, y;
     	//»­°å
     	Graphics gic = img.getGraphics();
-    	//»­¸ö¾ØÐÎ±³¾°
+    	//»­¾ØÐÎ±³¾°
     	r = (int) (Math.random() * 256);
     	g = (int) (Math.random() * 256);
     	b = (int) (Math.random() * 256);

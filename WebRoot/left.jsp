@@ -83,11 +83,11 @@ function list(idstr){
 				<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
 				  <tr>
 					<td width="25%" rowspan="2"><img src="images/ico02.gif" width="35" height="35" /></td>
-					<td width="75%" height="22" class="left-font01">您好 ， <span class="left-font02">king</span></td>
+					<td width="75%" height="22" class="left-font01">您好 ， <span class="left-font02">${empName }</span></td>
 				  </tr>
 				  <tr>
 					<td height="22" class="left-font01">
-						[&nbsp;<a href="../login.html" target="_top" class="left-font01">退出</a>&nbsp;]</td>
+						[&nbsp;<a href="login.jsp" target="_top" class="left-font01">退出</a>&nbsp;]</td>
 				  </tr>
 				</table>
 			</td>
@@ -144,23 +144,23 @@ function list(idstr){
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu17" src="images/ico06.gif" width="8" height="12" /></td>
 				  <td width="91%">
-						<a href="sendxiaoxi.htm" target="mainFrame" class="left-font03" onClick="tupian('17');">发送消息</a></td>
+						<a href="MessSendServlet" target="mainFrame" class="left-font03" onClick="tupian('17');">发送消息</a></td>
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu18" src="images/ico06.gif" width="8" height="12" /></td>
 				  <td width="91%">
-					<a href="listtakexiaoxi.htm" target="mainFrame" class="left-font03" onClick="tupian('18');">收件消息查看</a></td>
+					<a href="MessGetServlet" target="mainFrame" class="left-font03" onClick="tupian('18');">收件消息查看</a></td>
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu19" src="images/ico06.gif" width="8" height="12" /></td>
 				  <td width="91%">
-						<a href="listsendxiaoxi.htm" target="mainFrame" class="left-font03" onClick="tupian('19');">发件消息查看
+						<a href="MessSendsServlet" target="mainFrame" class="left-font03" onClick="tupian('19');">发件消息查看
 							</a></td>
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu24" src="images/ico06.gif" width="8" height="12" /></td>
 				  <td width="91%">
-						<a href="listxiaoxi.htm" target="mainFrame" class="left-font03" onClick="tupian('24');">消息信息列表
+						<a href="MessServlet" target="mainFrame" class="left-font03" onClick="tupian('24');">消息信息列表
 							</a></td>
 				</tr>
       </table>

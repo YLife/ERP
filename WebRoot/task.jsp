@@ -77,11 +77,15 @@ function link(){
     document.getElementById("fom").action="addrenwu.htm";
    document.getElementById("fom").submit();
 }
-
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "TaskDelServlet";
+	 fom.submit();
+}
 </SCRIPT>
 
 <body>
-<form name="fom" id="fom" method="post" action="">
+<form name="fom" id="fom" method="post" action="TaskServlet">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   
   <tr>
@@ -108,7 +112,7 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选任务" />
+	              <input name="Submit" type="button" class="right-button08" value="删除所选任务" onclick="del();"/>
 	             </td>
           	 </tr>
               <tr>
@@ -117,9 +121,9 @@ function link(){
 				 <tr class="CTitle" >
                     	<td height="22" colspan="7" align="center" style="font-size:16px">任务详细列表</td>
                   </tr>
-                  <tr bgcolor="#EEEEEE">
-				    <td width="4%" align="center" height="30">选择</td>
-                    <td width="10%">任务标题</td>
+                  <tr bgcolor="#EEEEEE" align="center">
+				    <td width="4%"  height="30">选择</td>
+                    <td width="10%" >任务标题</td>
 					<td width="10%">创建时间</td>
                     <td width="10%">所属项目</td>
 					<td width="10%">执行人</td>
@@ -127,14 +131,14 @@ function link(){
 					<td width="12%">操作</td>
                   </tr>
                   <c:forEach items="${list }" var="task">
-	                  <tr bgcolor="#FFFFFF">
-					    <td height="20"><input type="checkbox" name="delid"/></td>
+	                  <tr bgcolor="#FFFFFF" align="center">
+					    <td height="20"><input type="checkbox" name="delid" value="${task.taskId }"/></td>
 	                    <td>${task.taskName }</td>
 						<td>${task.createDate }</td>
 	                    <td>${task.pro1.proName }</td>
 	                    <td>${task.emp1.empName }</td>
 	                    <td>${task.priority.priorityName }</td>
-	                    <td><a href="TaskEditServlet?taskId=${task.taskId }">编辑|</a><a href="TaskDataServlet?taskId=${task.taskId }">查看</td>
+	                    <td><a href="TaskEditServlet?taskId=${task.taskId }">编辑|</a><a href="TaskDataServlet?taskId=${task.taskId }">查看</a></td>
 	                  </tr>
 				 </c:forEach>
             </table></td>

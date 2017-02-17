@@ -295,6 +295,120 @@
     <servlet-name>ValidateServlet</servlet-name>
     <servlet-class>com.yl.servlet.ValidateServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>CheckServlet</servlet-name>
+    <servlet-class>com.yl.servlet.CheckServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessSendServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoMessSendServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoMessSendServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessGetServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessGetServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessGetDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessGetDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessSendsServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessSendsServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessSendsDataServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessSendsDataServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessSendsDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessSendsDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>MessGetDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.MessGetDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ClientDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ClientDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TaskDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.TaskDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProModDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProModDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProFunDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProFunDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ProDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.ProDelServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+  <filter>
+  	<filter-name>controller</filter-name>
+  	<filter-class>com.yl.filter.Controller</filter-class>
+  </filter>
 
 
 
@@ -342,6 +456,17 @@
 
 
 
+
+
+
+
+
+
+
+  <filter-mapping>
+  	<filter-name>controller</filter-name>
+  	<url-pattern>*.jsp</url-pattern>
+  </filter-mapping>	
   <servlet-mapping>
     <servlet-name>ClientServlet</servlet-name>
     <url-pattern>/ClientServlet</url-pattern>
@@ -537,6 +662,74 @@
   <servlet-mapping>
     <servlet-name>ValidateServlet</servlet-name>
     <url-pattern>/ValidateServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>CheckServlet</servlet-name>
+    <url-pattern>/CheckServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessServlet</servlet-name>
+    <url-pattern>/MessServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessDataServlet</servlet-name>
+    <url-pattern>/MessDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessSendServlet</servlet-name>
+    <url-pattern>/MessSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoMessSendServlet</servlet-name>
+    <url-pattern>/DoMessSendServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessGetServlet</servlet-name>
+    <url-pattern>/MessGetServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessGetDataServlet</servlet-name>
+    <url-pattern>/MessGetDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessSendsServlet</servlet-name>
+    <url-pattern>/MessSendsServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessSendsDataServlet</servlet-name>
+    <url-pattern>/MessSendsDataServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessDelServlet</servlet-name>
+    <url-pattern>/MessDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessSendsDelServlet</servlet-name>
+    <url-pattern>/MessSendsDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MessGetDelServlet</servlet-name>
+    <url-pattern>/MessGetDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClientDelServlet</servlet-name>
+    <url-pattern>/ClientDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TaskDelServlet</servlet-name>
+    <url-pattern>/TaskDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProModDelServlet</servlet-name>
+    <url-pattern>/ProModDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProFunDelServlet</servlet-name>
+    <url-pattern>/ProFunDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ProDelServlet</servlet-name>
+    <url-pattern>/ProDelServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
