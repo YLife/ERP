@@ -397,6 +397,69 @@
     <servlet-name>ProDelServlet</servlet-name>
     <servlet-class>com.yl.servlet.ProDelServlet</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoEmpJobAddServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoEmpJobAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmJobDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpJobDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpSalTypeDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpSalTypeDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>EmpDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.EmpDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileServlet</servlet-name>
+    <servlet-class>com.yl.servlet.FileServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileDelServlet</servlet-name>
+    <servlet-class>com.yl.servlet.FileDelServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <servlet-class>com.yl.servlet.FileUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoFileUploadServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DoFileUploadServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DoFileUploadServlet2</servlet-name>
+    <servlet-class>com.yl.servlet.DoFileUploadServlet2</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -410,7 +473,10 @@
   	<filter-class>com.yl.filter.Controller</filter-class>
   </filter>
 
-
+  <filter>
+  	<filter-name>encoding</filter-name>
+  	<filter-class>com.yl.filter.Encoding</filter-class>
+  </filter>
 
 
 
@@ -467,6 +533,10 @@
   	<filter-name>controller</filter-name>
   	<url-pattern>*.jsp</url-pattern>
   </filter-mapping>	
+  <filter-mapping>
+  	<filter-name>encoding</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
   <servlet-mapping>
     <servlet-name>ClientServlet</servlet-name>
     <url-pattern>/ClientServlet</url-pattern>
@@ -730,6 +800,42 @@
   <servlet-mapping>
     <servlet-name>ProDelServlet</servlet-name>
     <url-pattern>/ProDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoEmpJobAddServlet</servlet-name>
+    <url-pattern>/DoEmpJobAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmJobDelServlet</servlet-name>
+    <url-pattern>/EmpJobDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpSalTypeDelServlet</servlet-name>
+    <url-pattern>/EmpSalTypeDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>EmpDelServlet</servlet-name>
+    <url-pattern>/EmpDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileServlet</servlet-name>
+    <url-pattern>/FileServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileDelServlet</servlet-name>
+    <url-pattern>/FileDelServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FileUploadServlet</servlet-name>
+    <url-pattern>/FileUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoFileUploadServlet</servlet-name>
+    <url-pattern>/DoFileUploadServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DoFileUploadServlet2</servlet-name>
+    <url-pattern>/DoFileUploadServlet2</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

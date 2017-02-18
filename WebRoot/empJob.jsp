@@ -76,7 +76,11 @@ function link(){
     document.getElementById("fom").action="zhiwu.htm";
    document.getElementById("fom").submit();
 }
-
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "EmpJobDelServlet";
+	 fom.submit();
+}
 </SCRIPT>
 </head>
 <body>
@@ -103,8 +107,8 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-	              <input name="Submit" type="button" class="right-button08" value="删除所选职位信息" />
-	              <input name="Submit2" type="button" class="right-button08" value="添加职位" onclick="link();"/></td>
+	              <input name="Submit" type="button" class="right-button08" value="删除所选职位信息" onclick="del()"/>
+	           </td>
           	 </tr>
               <tr>
                 <td height="40" class="font42"><table width="100%" border="0" cellpadding="4" cellspacing="1" bgcolor="#464646" class="newfont03">
@@ -119,9 +123,8 @@ function link(){
                     <td width="6%" align="center" bgcolor="#EEEEEE">操作</td>
                   </tr>
                   <c:forEach items="${list }" var="empJob">
-                  	  <input type="hidden" name="jobId" value="${empJob.jobId }"/>
 	                  <tr align="center">
-					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
+					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${empJob.jobId }" /></td>
 	                    <td height="20" bgcolor="#FFFFFF">${empJob.jobName }</td>
 	                    <td bgcolor="#FFFFFF">&nbsp;</td>
 	                    <td bgcolor="#FFFFFF"><a href="EmpJobDataServlet?jobId=${empJob.jobId }">查看</a></td>

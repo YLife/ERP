@@ -19,8 +19,22 @@ body {
 -->
 </style>
 <link href="css/css.css" rel="stylesheet" type="text/css" />
-</head>
-<SCRIPT language=JavaScript>
+<SCRIPT type="text/javascript">
+window.onload=function(){
+	var role = document.getElementById("role").value;
+	var div1 = document.getElementById("div1");
+	var div2 = document.getElementById("div2");
+	var div3 = document.getElementById("div3");
+	var div4 = document.getElementById("div4");
+	if (role == "员工") {
+		div1.removeChild(div2);
+		div1.removeChild(div3);
+		div1.removeChild(div4);
+	}
+	if (role == "管理员") {
+		div1.removeChild(div4);
+	}
+};
 function tupian(idt){
     var nametu="xiaotu"+idt;
     var tp = document.getElementById(nametu);
@@ -40,7 +54,6 @@ function tupian(idt){
 	  }
 	}
 }
-
 function list(idstr){
 	var name1="subtree"+idstr;
 	var name2="img"+idstr;
@@ -70,13 +83,17 @@ function list(idstr){
 		imgobj.src="images/ico04.gif";
 	}
 }
-
 </SCRIPT>
+</head>
 
 <body>
-<table width="198" border="0" cellpadding="0" cellspacing="0" class="left-table01">
+<form action="">
+   <input type="hidden" value="${roleName }" id="role"/>
+</form>
+<table width="198" border="0" cellpadding="0" cellspacing="0" class="left-table01" id="">
   <tr>
     <TD>
+    	<div id="div1">
 		<table width="100%" border="0" cellpadding="0" cellspacing="0">
 		  <tr>
 			<td width="207" height="55" background="images/nav01.gif">
@@ -95,7 +112,7 @@ function list(idstr){
 		</table>
 		
 
-
+		<div id="div2">
 		<!--  任务系统开始    -->
 		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
@@ -121,6 +138,7 @@ function list(idstr){
 				  <td width="91%"><a href="TaskServlet" target="mainFrame" class="left-font03" onClick="tupian('21');">任务消息查看</a></td>
 				</tr>
       </table>
+      </div>
 		<!--  任务系统结束    -->
 
 		
@@ -197,7 +215,7 @@ function list(idstr){
 				</tr>
 				<tr>
 				  <td width="9%" height="20" ><img id="xiaotu6" src="images/ico06.gif" width="8" height="12" /></td>
-				  <td width="91%"><a href="proUpload.jsp" target="mainFrame" class="left-font03" onClick="tupian('6');">项目上传信息查看</a></td>
+				  <td width="91%"><a href="FileServlet" target="mainFrame" class="left-font03" onClick="tupian('6');">项目上传信息查看</a></td>
 				</tr>
 				
       </table>
@@ -255,6 +273,7 @@ function list(idstr){
 	  <!--  人员信息管理结束    -->
 
 	   <!--  考勤系统开始    -->
+	   <div id="div3">
 	   <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -276,10 +295,11 @@ function list(idstr){
           <td width="91%"><a href="EmpWorkCheckServlet" target="mainFrame" class="left-font03" onClick="tupian('12');">员工考勤信息查看</a></td>
         </tr>
       </table>
-
+	  </div>
       <!--  考勤系统结束   -->
 
 	  <!-- 管理系统开始 -->
+	  <div id="div4">
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -298,9 +318,10 @@ function list(idstr){
         </tr>
         <tr>
           <td height="20"><img id="xiaotu14" src="images/ico06.gif" width="8" height="12" /></td>
-          <td><a href="addquanxian.html" target="mainFrame" class="left-font03" onClick="tupian('14');">添加角色</a></td>
+          <td><a href="empJobAdd.jsp" target="mainFrame" class="left-font03" onClick="tupian('14');">添加职位</a></td>
         </tr>
       </table>
+      </div>
 	  <!-- 管理系统结束 -->
 
 		
@@ -331,7 +352,7 @@ function list(idstr){
 				
       </table>
 		<!--  个人信息管理结束    -->
-
+		</div>
 	  </TD>
   </tr>
   

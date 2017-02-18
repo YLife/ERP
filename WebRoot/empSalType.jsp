@@ -77,10 +77,15 @@ function unselectAll(){
 		}
 	}
 }
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "EmpSalTypeDelServlet";
+	 fom.submit();
+}
 </SCRIPT>
 
 <body>
-<form method="post" action="EmpSalTypeServlet">
+<form method="post" action="EmpSalTypeServlet" id="fom" name="fom">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
   <tr>
@@ -109,7 +114,7 @@ function unselectAll(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择：<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-		           <input name="Submit" type="button" class="right-button08" value="删除所选类型" />
+		           <input name="Submit" type="button" class="right-button08" value="删除所选类型" onclick="del()"/>
 				   <input name="button" type="button" class="right-button08" value="添加记录" onclick="javascript:location.href='empSalTypeAdd.jsp'"/>
 	              </td>
           </tr>
@@ -133,7 +138,7 @@ function unselectAll(){
                   <c:forEach items="${list }" var="list">
 	                  <tr>
 					    <td bgcolor="#FFFFFF"><div align="center">
-					      <input type="checkbox" name="delid"/>
+					      <input type="checkbox" name="delid" value="${list.salTypeId }"/>
 					      </div></td>
 	                    <td height="20" bgcolor="#FFFFFF"><div align="center">${list.salTypeName }</div></td>
 						<td height="20" bgcolor="#FFFFFF" align="center"><div align="center">${list.salTypeAmount }</div></td>

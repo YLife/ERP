@@ -75,12 +75,16 @@ function unselectAll(){
 function link(){
     window.location.href="empAdd.jsp";
 }
-
+function del() {
+	 var fom = document.getElementById("fom");
+	 fom.action = "EmpDelServlet";
+	 fom.submit();
+}
 </SCRIPT>
 </head>
 
 <body>
-<form name="fom" id="fom" method="post">
+<form name="fom" id="fom" method="post" action="EmpServlet">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 
   <tr>
@@ -110,7 +114,7 @@ function link(){
           <td><table width="95%" border="0" align="center" cellpadding="0" cellspacing="0">
           	 <tr>
                <td height="20"><span class="newfont07">选择<a href="#" class="right-font08" onclick="selectAll();">全选</a>-<a href="#" class="right-font08" onclick="unselectAll();">反选</a></span>
-		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" onclick="link();" /> <input name="Submit" type="button" class="right-button08" value="添加人员信息" onclick="link();" />
+		           <input name="Submit" type="button" class="right-button08" value="删除人员信息" onclick="del();" /> <input name="Submit" type="button" class="right-button08" value="添加人员信息" onclick="link();" />
 		           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
 	              </td>
           </tr>
@@ -135,7 +139,7 @@ function link(){
                   </tr>
                   <c:forEach items="${list }" var="emp">
 	                  <tr align="center">
-					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid"/></td>
+					    <td bgcolor="#FFFFFF"><input type="checkbox" name="delid" value="${emp.empId }"/></td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empId }</td>
 	                    <td bgcolor="#FFFFFF">${emp.empName }</td>
 	                    <td bgcolor="#FFFFFF">${emp.empJob.jobName }</td>

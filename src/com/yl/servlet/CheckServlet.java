@@ -32,6 +32,7 @@ public class CheckServlet extends HttpServlet {
 				if (validate.equalsIgnoreCase(code)) {
 					session.setAttribute("empId", empId);
 					session.setAttribute("empName", emp.getEmpName());
+					session.setAttribute("roleName", emp.getEmpRole().getRoleName());
 					session.removeAttribute("validate");
 					response.sendRedirect("index.jsp");					
 				}else {
