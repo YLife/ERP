@@ -451,6 +451,13 @@
     <servlet-name>DoFileUploadServlet2</servlet-name>
     <servlet-class>com.yl.servlet.DoFileUploadServlet2</servlet-class>
   </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DownloadServlet</servlet-name>
+    <servlet-class>com.yl.servlet.DownloadServlet</servlet-class>
+  </servlet>
+
 
 
 
@@ -836,6 +843,10 @@
   <servlet-mapping>
     <servlet-name>DoFileUploadServlet2</servlet-name>
     <url-pattern>/DoFileUploadServlet2</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DownloadServlet</servlet-name>
+    <url-pattern>/DownloadServlet</url-pattern>
   </servlet-mapping>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>

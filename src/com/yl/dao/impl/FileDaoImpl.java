@@ -7,14 +7,14 @@ import java.util.List;
 import com.yl.dao.FileDao;
 import com.yl.dao.ResultMapper;
 import com.yl.entity.Emp1;
-import com.yl.entity.File;
+import com.yl.entity.Files;
 import com.yl.entity.Pro1;
 import com.yl.vo.FileVo;
 
 public class FileDaoImpl extends DbUtil implements FileDao {
 
 	@Override
-	public List<File> queryAll(int currentPage, int pageSize, FileVo vo) {
+	public List<Files> queryAll(int currentPage, int pageSize, FileVo vo) {
 		String sql = "select * from file f left join pro p on f.proId = p.proId left join emp e on f.empId = e.empId where 1=1";
 		sql = setCondition(vo, sql);
 		sql += " limit ? ,?";
@@ -31,16 +31,16 @@ public class FileDaoImpl extends DbUtil implements FileDao {
 	}
 
 	@Override
-	public File queryById(Object id) {
+	public Files queryById(Object id) {
 		String sql = "select * from file f left join emp e on f.empId = e.empId left join pro p on f.proId = p.proId where fileId = £¿";
-		List<File> list = super.excuteQuery(sql, map, id);
+		List<Files> list = super.excuteQuery(sql, map, id);
 		return list.size() > 0 ? list.get(0) : null;
 	}
 
 	@Override
-	public int save(File entity) {
+	public int save(Files entity) {
 		String sql = "insert into file values(? ,? ,?, ?, ?)";
-		return super.excuteUpdate(sql, entity.getFileId() , entity.getFileName() ,entity.getUploadDate() , entity.getEmp1() , entity.getPro1());
+		return super.excuteUpdate(sql, entity.getFileId() , entity.getFileName() ,entity.getUploadDate() , entity.getEmp1().getEmpId() , entity.getPro1().getProId());
 	}
 
 	@Override
@@ -50,22 +50,22 @@ public class FileDaoImpl extends DbUtil implements FileDao {
 	}
 
 	@Override
-	public int update(File entity) {
+	public int update(Files entity) {
 		return 0;
 	}
 
 	@Override
 	public int getCount(FileVo vo) {
 		String sql = "select * from file f left join emp e on f.empId = e.empId left join pro p on f.proId = p.proId";
-		List<File> list = super.excuteQuery(sql, map);
+		List<Files> list = super.excuteQuery(sql, map);
 		return list.size();
 	}
-	ResultMapper<File> map = new ResultMapper<File>() {
+	ResultMapper<Files> map = new ResultMapper<Files>() {
 		
 		@Override
-		public File resultMapping(ResultSet rs) {
+		public Files resultMapping(ResultSet rs) {
 			try {
-				File file = new File(rs.getInt("fileId"), rs.getString("fileName"), rs.getDate("uploadDate"), new Emp1(rs.getInt("empId"), rs.getString("empName")), new Pro1(rs.getInt("proId"), rs.getString("proName")));
+				Files file = new Files(rs.getInt("fileId"), rs.getString("fileName"), rs.getDate("uploadDate"), new Emp1(rs.getInt("empId"), rs.getString("empName")), new Pro1(rs.getInt("proId"), rs.getString("proName")));
 				return file;
 			} catch (SQLException e) {
 				e.printStackTrace();

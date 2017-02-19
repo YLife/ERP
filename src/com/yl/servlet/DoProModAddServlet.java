@@ -42,6 +42,8 @@ public class DoProModAddServlet extends HttpServlet {
 		Pro pro = pbiz2.findById(proId);
 		Emp emp = ebiz.findByEmpName(empName);
 		Priority priority = pbiz.findById(modPriorityId);
+		System.out.println(proId);
+		System.out.println(emp);
 		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-mm-dd");
 		ProMod proMod = null;
 		try {

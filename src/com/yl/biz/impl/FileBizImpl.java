@@ -5,24 +5,24 @@ import java.util.List;
 import com.yl.biz.FileBiz;
 import com.yl.dao.FileDao;
 import com.yl.dao.impl.FileDaoImpl;
-import com.yl.entity.File;
+import com.yl.entity.Files;
 import com.yl.vo.FileVo;
 
 public class FileBizImpl implements FileBiz {
 	private FileDao dao = new FileDaoImpl();
 	
 	@Override
-	public List<File> findAll(int currentPage, int pageSize, FileVo vo) {
+	public List<Files> findAll(int currentPage, int pageSize, FileVo vo) {
 		return dao.queryAll(currentPage, pageSize, vo);
 	}
 
 	@Override
-	public File findById(Object id) {
+	public Files findById(Object id) {
 		return dao.queryById(id);
 	}
 
 	@Override
-	public int save(File entity) {
+	public int save(Files entity) {
 		return dao.save(entity);
 	}
 
@@ -32,7 +32,7 @@ public class FileBizImpl implements FileBiz {
 	}
 
 	@Override
-	public int update(File entity) {
+	public int update(Files entity) {
 		return dao.update(entity);
 	}
 

@@ -1,11 +1,10 @@
 package com.yl.entity;
-
 /**
  *业务要求所需，新创建一个实体类封装项目信息
  * @author Mr.Yang
  *
  */
-public class Pro1 {
+public class Pro1{
 	private int proId;
 	private String proName;
 	

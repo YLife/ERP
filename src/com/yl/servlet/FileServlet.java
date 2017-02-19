@@ -1,8 +1,10 @@
 package com.yl.servlet;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.yl.biz.FileBiz;
 import com.yl.biz.impl.FileBizImpl;
-import com.yl.entity.File;
+import com.yl.entity.Files;
 import com.yl.vo.FileVo;
 
 public class FileServlet extends HttpServlet {
@@ -33,8 +35,13 @@ public class FileServlet extends HttpServlet {
 		if (fileName != null && !"".equals(fileName)) {
 			vo.setFileName(fileName);
 		}
-		List<File> list = biz.findAll(page, size, vo);
+		List<Files> list = biz.findAll(page, size, vo);
 		int totalPage = biz.getTotalPage(size, vo);
+		ServletContext application = request.getServletContext();
+		File file = new File(application.getRealPath("/files"));
+		String[] str = file.list();
+		request.setAttribute("str", str);
+		request.setAttribute("length", str.length);
 		request.setAttribute("list", list);
 		request.setAttribute("fileName", fileName);
 		request.setAttribute("totalPage", totalPage);

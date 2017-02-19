@@ -71,7 +71,7 @@ function link(){
 					    <td align="right">所属项目:</td>
 					    <td><select name="proId" >
 			          	  <c:forEach items="${list1 }" var="pro1">
-				              <option value="pro1.proId" ${pro1.proId == proMod.pro1.proId ? "selected" : ""}>${pro1.proName }</option>         	  
+				              <option value="${pro1.proId }" ${pro1.proId == proMod.pro1.proId ? "selected" : ""}>${pro1.proName }</option>         	  
 			          	  </c:forEach>
                         </select></td>
 					  </tr>

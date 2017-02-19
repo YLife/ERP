@@ -7,18 +7,18 @@ import java.util.Date;
  * @author Mr.Yang
  *
  */
-public class File {
+public class Files {
 	private int fileId;
 	private String fileName;
 	private Date uploadDate;
 	private Emp1 emp1;
 	private Pro1 pro1;
 	
-	public File() {
+	public Files() {
 		super();
 	}
 
-	public File(int fileId, String fileName, Date uploadDate, Emp1 emp1,
+	public Files(int fileId, String fileName, Date uploadDate, Emp1 emp1,
 			Pro1 pro1) {
 		super();
 		this.fileId = fileId;

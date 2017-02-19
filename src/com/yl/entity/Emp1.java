@@ -1,10 +1,12 @@
 package com.yl.entity;
+
+
 /**
  * 业务要求所需，新创建一个实体类封装员工信息
  * @author Mr.Yang
  *
  */
-public class Emp1 {
+public class Emp1{
 	private int empId;
 	private String empName;
 	

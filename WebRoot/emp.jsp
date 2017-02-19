@@ -131,11 +131,11 @@ function del() {
                     <td width="9%" align="center" bgcolor="#EEEEEE">职位</td>
 					<td width="9%" align="center" bgcolor="#EEEEEE">类型</td>
 					<td width="10%" align="center" bgcolor="#EEEEEE">身份证号码</td>
-					<td width="4%" align="center" bgcolor="#EEEEEE">性别</td>
-					<td width="4%" align="center" bgcolor="#EEEEEE">年龄</td>
+					<td width="8%" align="center" bgcolor="#EEEEEE">性别</td>
+					<td width="8%" align="center" bgcolor="#EEEEEE">年龄</td>
 					<td width="11%" align="center" bgcolor="#EEEEEE">入职日期</td>
-					<td width="10%" align="center" bgcolor="#EEEEEE">联系电话</td>
-                    <td width="19%" align="center" bgcolor="#EEEEEE">操作</td>
+					<td width="11%" align="center" bgcolor="#EEEEEE">联系电话</td>
+                    <td width="10%" align="center" bgcolor="#EEEEEE">操作</td>
                   </tr>
                   <c:forEach items="${list }" var="emp">
 	                  <tr align="center">
@@ -149,7 +149,7 @@ function del() {
 						<td height="20" bgcolor="#FFFFFF">${date.year - emp.empBorn.year}</td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empDate }</td>
 						<td height="20" bgcolor="#FFFFFF">${emp.empPhone }</td>
-	                    <td bgcolor="#FFFFFF"><a href="EmpEditServlet?empId=${emp.empId }">编辑</a>&nbsp;|&nbsp;<a href="yuangongsalary.html">发工资</a>&nbsp;|&nbsp;<a href="yuangongxiangmu.html">项目</a></td>
+	                    <td bgcolor="#FFFFFF"><a href="EmpEditServlet?empId=${emp.empId }">编辑</a></td>
 	                  </tr>
                   </c:forEach>
                 </table></td>

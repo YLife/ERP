@@ -71,7 +71,7 @@ function link(){
 					    <td><select name="proId" >
                           <option>==请选择==</option>
 			          	  <c:forEach items="${list1 }" var="pro1">
-				              <option value="pro1.proId">${pro1.proName }</option>         	  
+				              <option value="${pro1.proId }">${pro1.proName }</option>         	  
 			          	  </c:forEach>
                         </select></td>
 					  </tr>
