@@ -1,13 +1,16 @@
 package com.yl.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.PrintWriter; 
+import java.util.Date;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
+import org.apache.log4j.Logger;
 
 import com.yl.biz.EmpBiz;
 import com.yl.biz.impl.EmpBizImpl;
@@ -20,6 +23,7 @@ public class CheckServlet extends HttpServlet {
 			throws ServletException, IOException {
 
 		response.setContentType("text/html;charset=utf-8");
+		Logger logger = Logger.getLogger(CheckServlet.class);
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
 		String empId = request.getParameter("empId");
@@ -34,6 +38,8 @@ public class CheckServlet extends HttpServlet {
 					session.setAttribute("empName", emp.getEmpName());
 					session.setAttribute("roleName", emp.getEmpRole().getRoleName());
 					session.removeAttribute("validate");
+					Date date = new Date();
+					logger.info(emp.getEmpName() + " ÔÚ " + date.toString() + " µÇÂ¼;");
 					response.sendRedirect("index.jsp");					
 				}else {
 					out.print("<script>alert('ÑéÖ¤Âë´íÎó!');window.history.go(-1)</script>");

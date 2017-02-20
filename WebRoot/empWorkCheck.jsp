@@ -150,9 +150,9 @@ function unselectAll(){
 	                    <td bgcolor="#FFFFFF"><div align="center">${emp.empSal.baseSal + emp.empSal.bonus + emp.empSal.other }</div></td>
 	                    <td bgcolor="#FFFFFF"><div align="center">${emp.empSal.fine }</div></td>
 	                    <td bgcolor="#FFFFFF"><div align="center">${emp.empSal.baseSal + emp.empSal.bonus + emp.empSal.other - emp.empSal.fine }</div></td>
-	                    <td bgcolor="#FFFFFF"><div align="center" class="top-font01">${emp.empSal.salState.salState }</div></td>
+	                    <td bgcolor="#FFFFFF"><div align="center" class="top-font01"><c:if test="${emp.empSal.salState.salState == '已发放'}"><span class="STYLE1">已发放</span></c:if><c:if test="${emp.empSal.salState.salState != '已发放'}">未发放</c:if></div></td>
 	                    <td bgcolor="#FFFFFF"><div align="center">韦华</div></td>
-	                    <td bgcolor="#FFFFFF"><div align="center"><a href="EmpWorkCheckDataServlet?empId=${emp.empId }">查看</a>&nbsp;|&nbsp;<c:if test="${emp.empSal.salState.salState == '已发放' }">已发</c:if><c:if test="${emp.empSal.salState.salState != '已发放' }"><a href="EmpSalSendServlet?empId=${emp.empId }">发放</a></c:if></div></td>
+	                    <td bgcolor="#FFFFFF"><div align="center"><a href="EmpWorkCheckDataServlet?empId=${emp.empId }">查看</a>&nbsp;|&nbsp;<c:if test="${emp.empSal.salState.salState == '已发放' }"><span class="STYLE1">已发</span></c:if><c:if test="${emp.empSal.salState.salState != '已发放' }"><a href="EmpSalSendServlet?empId=${emp.empId }">发放</a></c:if></div></td>
 	                  </tr>
 				  </c:forEach>
                   
@@ -168,7 +168,7 @@ function unselectAll(){
         <tr>
           <td height="33"><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="right-font08">
               <tr>
-                <td width="50%">共 <span class="right-text09">5</span> 页 | 第 <span class="right-text09">1</span> 页</td>
+                <td width="50%">共 <span class="right-text09">${totalPage }</span> 页 | 第 <span class="right-text09">${currentPage }</span> 页</td>
                 <td width="49%" align="right">
                 	[<a href="EmpWorkCheckServlet?currentPage=1" class="right-font08">首页</a> | <c:if test="${currentPage <= 1 }">上一页</c:if><c:if test="${currentPage > 1 }"><a href="EmpWorkCheckServlet?currentPage=${currentPage - 1 }" class="right-font08">上一页</a></c:if> | <c:if test="${currentPage < totalPage }"><a href="EmpWorkCheckServlet?currentPage=${currentPage + 1 }" class="right-font08">下一页</a></c:if><c:if test="${currentPage >= totalPage }">下一页</c:if> | <a href="EmpWorkCheckServlet?currentPage=${totalPage }" class="right-font08">末页</a>] 转至：
                 </td>

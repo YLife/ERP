@@ -24,7 +24,7 @@ public class ProDelServlet extends HttpServlet {
 		}
 		
 		if (row == mess.length) {
-			response.sendRedirect("ProModServlet");
+			response.sendRedirect("ProServlet");
 		}
 	}
 

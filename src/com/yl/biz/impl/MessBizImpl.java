@@ -46,4 +46,26 @@ public class MessBizImpl implements MessBiz {
 		return dao.findByEmpName(currentPage, pageSize, vo, empName);
 	}
 
+	@Override
+	public int getCount1(int pageSize ,MessVo vo, String empName) {
+		return (dao.getCount1(vo, empName) - 1) / pageSize + 1;
+	}
+
+	@Override
+	public int getCount2(int pageSize , MessVo vo, String empName) {
+		return (dao.getCount2(vo, empName) - 1) / pageSize + 1;
+	}
+
+	@Override
+	public List<Mess> findByEmpName1(int currentPage, int pageSize, MessVo vo,
+			String empName) {
+		return dao.findByEmpName1(currentPage, pageSize, vo, empName);
+	}
+
+	@Override
+	public List<Mess> findByEmpName2(int currentPage, int pageSize, MessVo vo,
+			String empName) {
+		return dao.findByEmpName2(currentPage, pageSize, vo, empName);
+	}
+
 }

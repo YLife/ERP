@@ -132,12 +132,10 @@ function del() {
                     <td>${file.uploadDate }</td>
                     <td>${file.pro1.proName }</td>
                     <td>
-                    	<c:if test="${length != 0 }">
-	                    	<c:forEach items="${str }" var="str">
-	                    		<a href="DownloadServlet?file=${str }">下载</a>
-	                    	</c:forEach>
+                    	<c:if test="${file.fileName != null && file.fileId > 3}">
+	                    	<a href="DownloadServlet?file=${file.fileName }">下载</a>
                     	</c:if>
-                    	<c:if test="${length == 0 }">
+                    	<c:if test="${file.fileName == null || file.fileId <= 3}">
                     		<span>暂无文件可下载</span>
                     	</c:if>
                     </td>

@@ -10,7 +10,7 @@ import com.yl.entity.Mess;
 import com.yl.vo.MessVo;
 
 public class MessDaoImpl extends DbUtil implements MessDao {
-	
+	private String name ;
 	@Override
 	public List<Mess> queryAll(int currentPage, int pageSize, MessVo vo) {
 		return null;
@@ -18,6 +18,7 @@ public class MessDaoImpl extends DbUtil implements MessDao {
 	
 	@Override
 	public List<Mess> findByEmpName(int currentPage, int pageSize, MessVo vo, String empName) {
+		name = empName;
 		String sql = "select * from mess where 1=1";
 		sql += " and (sendName = '"+empName+"' or getName = '"+empName+"')";
 		sql = setCondition(vo, sql);
@@ -70,9 +71,9 @@ public class MessDaoImpl extends DbUtil implements MessDao {
 
 	@Override
 	public int getCount(MessVo vo) {
-		String sql = "select * from mess where 1=1";
+		String sql = "select * from mess where sendName = ? or getName = ?";
 		sql = this.setCondition(vo, sql);
-		List<Mess> list = super.excuteQuery(sql, map);
+		List<Mess> list = super.excuteQuery(sql, map , name , name);
 		return list.size();
 	}
 	
@@ -89,5 +90,39 @@ public class MessDaoImpl extends DbUtil implements MessDao {
 			return null;
 		}
 	};
+
+	@Override
+	public int getCount1(MessVo vo, String empName) {
+		String sql = "select * from mess where sendName = ?";
+		sql = this.setCondition(vo, sql);
+		List<Mess> list = super.excuteQuery(sql, map , empName);
+		return list.size();
+	}
+
+	@Override
+	public int getCount2(MessVo vo, String empName) {
+		String sql = "select * from mess where getName = ?";
+		sql = this.setCondition(vo, sql);
+		List<Mess> list = super.excuteQuery(sql, map , empName);
+		return list.size();
+	}
+
+	@Override
+	public List<Mess> findByEmpName1(int currentPage, int pageSize, MessVo vo,
+			String empName) {
+		String sql = "select * from mess where sendName = ?";
+		sql = this.setCondition(vo, sql);
+		sql += " limit ? , ?";
+		return super.excuteQuery(sql, map, empName , (currentPage - 1) * pageSize , pageSize);
+	}
+
+	@Override
+	public List<Mess> findByEmpName2(int currentPage, int pageSize, MessVo vo,
+			String empName) {
+		String sql = "select * from mess where getName = ?";
+		sql = this.setCondition(vo, sql);
+		sql += " limit ? , ?";
+		return super.excuteQuery(sql, map, empName , (currentPage - 1) * pageSize , pageSize);
+	}
 
 }

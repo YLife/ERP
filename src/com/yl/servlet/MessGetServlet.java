@@ -38,8 +38,8 @@ public class MessGetServlet extends HttpServlet {
 		if (end != null && !"".equals(end)) {
 			vo.setEnd(end);
 		}
-		List<Mess> list = biz.findByEmpName(page, size, vo, empName);
-		int totalPage = biz.getTotalPage(size, vo);
+		List<Mess> list = biz.findByEmpName2(page, size, vo, empName);
+		int totalPage = biz.getCount2(size , vo, empName);
 		request.setAttribute("list", list);
 		request.setAttribute("currentPage", page);
 		request.setAttribute("totalPage", totalPage);

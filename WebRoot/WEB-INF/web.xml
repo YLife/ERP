@@ -459,7 +459,14 @@
   </servlet>
 
 
-
+ <servlet>
+  <servlet-name>Log4jInit</servlet-name>
+  <servlet-class>com.yl.servlet.CheckServlet</servlet-class>
+  <init-param>
+   <param-name>log4j</param-name>
+   <param-value>/WEB-INF/classes/log4j.properties</param-value>
+  </init-param>
+ </servlet>
 
 
 
@@ -484,8 +491,6 @@
   	<filter-name>encoding</filter-name>
   	<filter-class>com.yl.filter.Encoding</filter-class>
   </filter>
-
-
 
 
 

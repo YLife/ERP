@@ -56,9 +56,9 @@ public class DoFileUploadServlet extends HttpServlet {
 		//解析文件
 		for (FileItem item : list) {
 			if (item.isFormField()) {
-				map.put(item.getFieldName(), item.getString());
+				map.put(item.getFieldName(), new String(item.getString().getBytes("iso-8859-1"), "utf-8"));
 			}else {
-				//得到文件名
+			 	//得到文件名
 				String name = item.getName();
 				String ex = "";
 				//得到扩展名
@@ -73,13 +73,14 @@ public class DoFileUploadServlet extends HttpServlet {
 				String realPath = request.getSession().getServletContext().getRealPath(filePath);
 				//保存文件
 				File file = new File(realPath);
+				System.out.println(map.get("fileName"));
 				try {
 					item.write(file);
 					Emp emp = ebiz.findById(Integer.parseInt(empId));
 					Pro pro = pbiz.findById(Integer.parseInt(map.get("proId")));
 					Emp1 emp1 = new Emp1(emp.getEmpId(), emp.getEmpName());
 					Pro1 pro1 = new Pro1(pro.getProId(), pro.getProName());
-					Files files = new Files(0, map.get("fileName"), sdf.parse("2007-01-01"), emp1, pro1);
+					Files files = new Files(0, fName, sdf.parse("2007-01-01"), emp1, pro1);
 					int row = biz.save(files);
 					if (row > 0) {
 						response.getWriter().print("<script>alert('上传成功！');window.location.href='index.jsp'</script>");
